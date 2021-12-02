@@ -1,1 +1,11 @@
 + Add 404 page.
++ meta keywords for all pages.
++ meta description for all pages.
++ Pase URLs a español ya q el sitio es de un negocio de Rosario.
++ Site Map.
++ El footer incluye redes sociales, no les coloque el link ya q tendria q pedir permiso, sino la proxima le pongo a un lugar cualquiera.
++ Diceño mobile first. En cada entrega siempre voy acomodando un poquito más.
++ Logo to svg.
++ Shortcut and favicon.
++ El diceño de la pagina apunta a ser bien spartano, sumado a q es un sitio simple me parecio mejor luego de aprender sobre Bootstrap el sacarlo ya q no parecia justificar. (Confirme con el profesor y en un mensaje de slack me puso q era opcional).
+

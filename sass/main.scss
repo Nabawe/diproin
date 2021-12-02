@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+// ¿para q es el &display=swap ?
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Noto+Sans&family=Hina+Mincho&display=swap');
+/*
+  font-family: 'Open Sans', sans-serif; Main Font
+  font-family: 'Noto Sans', sans-serif; The "Almost All" Languages Font
+  font-family: 'Hina Mincho', serif; Styled Font
+*/
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');/* Error 404 logo */
 
 $color-Main: #0397D1;
 $color-LogoWhite: #fff;
@@ -136,7 +142,7 @@ $color-Text: #222;
     width: 100%; /* RECORDATORIO No se si es necesaria esta linea, definir si es 100 95 80 */
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
 
     p {
@@ -150,7 +156,7 @@ $color-Text: #222;
     /* height: 20%; */
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap; /* Mejorar, tal vez sea necesario usar grids para q queden comodamente distribuidos en 2 lineas */
     gap: 5px;
@@ -161,6 +167,8 @@ $color-Text: #222;
     height: 70px;
     transform: skew(30deg);
     background-color: $color-Accent;
+    border: 2px solid #444;
+    border-radius: 4px;
 
     a img { /* Mejorar o usar fontawesome */
       /* usar modificadores svg ? */
@@ -198,6 +206,16 @@ $color-Text: #222;
 
 /* +Index */
 
+/* + */
+
+
+/* +404 */
+  .e404--logo {
+    font-size: 20rem;
+    color: $color-Highlight;
+    text-shadow: 2px 2px 2px $color-Text;
+    font-family: 'Monoton', cursive;
+  }
 /* + */
 
 
@@ -266,9 +284,3 @@ $color-Text: #222;
     grid-area: aside;
   }
 /* + */
-
-
-.main__article--strikeThrough { /* quitar BEM */
-  text-decoration: line-through;
-  color: $color-Highlight;
-}
