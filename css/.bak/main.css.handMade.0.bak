@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+/* Para no olvidarme q existe */
+/* :root {
+} */
+
+* {
+  margin: 0px; /* ¿Es mejor agregar unidades aquí? */
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+/* +Defaults */
+  html {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    background-color: #6296BA;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;/* Aquí primero no estoy completamente seguro si deberia usar flexbox por defecto para Mobile First y segundo no estoy seguro si usar items o content para body o ambos?  */
+    align-items: center;
+  }
+
+  body p {
+    color: #222;
+  }
+
+  body h2, body h3, body h4 {
+    color: #F2FBFF;
+  }
+/* + */
+
+
+/* +Header */
+  header {
+    width: 95%; /* Otra propiedad q si no ponia quedaba mal en 360. ¿Recomendacion? */
+    /* height: 4rem; */ /* Aquí dudo si esto es lo correcto, el objetivo es q siempre sean legibles las letras de la nav y ajustar el logo acorde. */
+  }
+
+  .logo {
+    height: 5rem; /* Siento q poner esto es hacer trampa, ya q sino me cambiaba toda la nav, ¿Recomendaciones? */
+    /* display: block; ¿Necesito de esto? */ /* ¿Hubiera sido encerrar la <a> en una div en vez d combertir todo a block? */
+  }
+
+  header nav {
+    /* width: auto; */
+    /* height: 5px; */
+    /* margin-left: 2px; */
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+      "nLogo nav1 nav2"
+      "nLogo nav3 nav4"
+    ;
+    align-items: center; /* No me quedan bien las alineaciones del texto. */
+    /* Y los botones me quedan en tamaños desiguales, estoy intentando evitar usar una medida absoluta d width */
+  }
+
+  /* header nav a {
+
+  } */
+
+  header nav a:hover {
+    color: #EEE8A9;
+  }
+
+  .nav__Text {
+    min-width: 110px; /* Si cambio "Nosotros" por "Quienes Somos" en el html queda todo mal, ¿Cómo tendria q solucionarlo para poder usar Quienes Somos? */
+    color: #F2FBFF;
+    text-decoration: none;
+    /* border: 2px solid #0397d1; */
+    background-color: #0397d1;
+    border-radius: 10px;
+    font-size: 0.9rem; /* Otra propiedad q si no ponia quedaba mal en 360. ¿Recomendacion? */
+    text-align: center;
+    padding: 3% 0px;
+    padding-bottom: 4%; /* Sin esto queda mal la alineacion vertical. ¿Recomendacion? */
+  }
+
+  #nLogo {
+    border: none;
+    background-color: unset;
+    grid-area: nLogo;
+    padding: 0px;
+    margin-top: 4%; /* Nuevamente use esto pork sino quedaba mal "align" */
+    justify-self: left; /* Otra propiedad q si no ponia quedaba mal en 360. En realidad queria mover las <a> de la nav q no son el logo más cerca del lado der del logo pero agregando la menor cantidad de codigo y en especial sin modificar el html. ¿Recomendacion? */
+    /* ¿Afectara estar usando directamente <a>? probe usando display:block y inlineblock para no poner divs. */
+  }
+
+  #nav1 {
+    grid-area: nav1;
+  }
+
+  #nav2 {
+    grid-area: nav2;
+  }
+
+  #nav3 {
+    grid-area: nav3;
+  }
+
+  #nav4 {
+    grid-area: nav4;
+  }
+/* + */
+
+
+/* +Main */
+/* Puesto asi para q sea por defecto para todas las secciones. */
+  main {
+    width: 90%;
+    /* margin: 0 5%; */ /* Borrar esto y acomodar bien con flexbox primero, usando un container dentro de main para el contenido o darle flex a todo el body */
+    margin-top: 10px;
+    margin-bottom: 100px; /* Para separar en todas las pag el Footer del contenido */
+    display: flex;
+    flex-direction: column;/* Arreglar error para q no quede corrido sobre la izquierda */
+    justify-items: center;
+    align-items: center;
+    gap: 10px; /* Quitar esto una ver removidos los WIP ya q las section agregan marging */
+    /* justify-content: center;
+    align-content: center; *//* Tal vez necesite estas 2 aquí ? */
+  }
+
+  main section {
+    width: 100%;
+    height: auto;
+    box-shadow: 3px 3px 2px 4px rgba(34, 34, 34, 0.600); /* es #222 con 0.6 de alpha */
+    border-radius: 4px;
+    padding: 5px;
+    margin: 10px 0px;
+  }
+/* + */
+
+
+/* +Footer */
+  footer {
+    width: 100%; /* No se si es necesaria esta linea, definir si es 100 95 80 */
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  footer p {
+    color: #F2FBFF;
+    text-align: center;
+  }
+
+  .foot__CardsDiv {
+    width: 100%;
+    /* height: 20%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-wrap: wrap; /* Mejorar, tal vez sea necesario usar grids para q queden comodamente distribuidos en 2 lineas */
+    gap: 5px;
+  }
+
+  .foot__Card {
+    width: 100px;/* usar medidas relativas */
+    height: 70px;
+    transform: skew(30deg);
+    background-color: #F2FBFF;
+    background: rgb(98,150,186);
+    background: linear-gradient(145deg, rgba(98,150,186,1) 4%, rgba(242,251,255,1) 90%, rgba(238,232,169,1) 98%);  /* Sacar esto luego */
+  }
+
+  .foot__Card a img { /* Mejorar o usar fontawesome. ¿Alguna recomendacion? ya q se me alteran mucho y hasta pixelean*/
+    /* usar modificadores svg ? */
+    width: 90%;
+    height: 90%;
+  }
+
+  #footContact {
+    width: 120px; /* usar medidas relativas */
+    height: 90px; /* Dejar q se escapen un poco las puntas, por ahi cambie d opinon luego */
+    transform: skew(145deg);
+    margin-right: 15px; /* Q haya un poco d superposicion en las puntas */
+    background: rgb(98,150,186);
+    background: linear-gradient(30deg, rgba(98,150,186,1) 4%, rgba(242,251,255,1) 90%, rgba(238,232,169,1) 98%);  /* Sacar esto luego */
+    transition: 500ms;
+    z-index: 1;
+  }
+
+  #footContact:hover {
+    transform: translate(-100px);
+    transition: 150ms; /* Se escapa rapido y vuelve lento */
+  }
+
+  .madeBy {
+    width: 33px;
+    height: 33px;
+    transform: scaleY(5.01);/* Intentando crear forma de diamante y fallando horriblemente hay otras scales en el documento team.html por mas q lo voy a sacar despues */
+    transform: rotate(45deg);
+    background-color: #F2FBFF;
+    color: #222;
+    text-align: center;
+    border: 1px solid #222;
+    overflow:hidden;
+    transition: 260ms;
+  }
+
+  .madeBy:hover { /* Sacar y limpiar esto luego */
+    width: 444px;
+  }
+/* + */
+
+
+/* +Index */
+  /* section.index {
+    Sacar border, usar shadow pero solo de der y bot
+    border: 1px solid #222;
+    box-shadow: 0px 0px 1px 1px #222;
+    padding: 5px;
+    margin: 20px 0px;
+  } */
+/* + */
+
+
+/* +Products */
+  .products-table {
+    width: 100%;
+    height: 100%;
+  }
+/* + */
+
+
+/* +Services */
+  /* section.services {
+    border: 2px solid black;
+  }
+
+  section.testimonials {
+    border: 2px solid black;
+  } */
+/* + */
+
+
+/* +Media Querries */
+  /* A futuro pensar, 3 medidas de celulares, 2 de phablets, 4 de tablets, 2 de notebook 16:10 y 16:9, 4 de PC, 4 de TV, 2 cuadradas universales para todos los dispositivos q usen pantallas cuadradas. ¿Tiene algo de sentido lo q puse recien o solo estoy desperdiciando tiempo? ¿Hay algun sitio q haga analisis y me diga a q apuntar para X producto/tipo de pagina? */
+  /* @media only screen and (min-width:600px) {
+    main.asideGrid {
+      grid-template-areas:
+        "deals liveFeed"
+        "news liveFeed"
+      ;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+    }
+  } */
+
+  @media only screen and (min-width:1024px) {
+    header {
+      width: 90%;
+    }
+
+    header nav {
+      display: grid;
+      gap: 20px;
+      grid-template-areas:
+        "nLogo nav1 nav2 nav3 nav4"
+      ;
+    }
+
+    .nav__Text {
+      font-size: 1.5rem;
+    }
+
+    #nLogo {
+      border: none;
+      background-color: unset;
+      grid-area: nLogo;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    main.asideGrid {
+      /* flex: none; */ /* ¿Es necesario? */
+      display: grid;
+      gap: 20px;
+      grid-template-areas:
+        "sec1 aside"
+        "sec2 aside"
+      ;
+      /* align-items: center; */
+      /* justify-items: center; */
+    }
+
+    main section {
+      margin: 0px 0px;
+    }
+  }
+
+  section.sec1 {
+    grid-area: sec1;
+  }
+  section.sec2 {
+    grid-area: sec2;
+  }
+  section.aside {
+    grid-area: aside;
+  }
+/* + */

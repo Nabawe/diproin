@@ -1,0 +1,55 @@
+Intentar jugar con Parallax entre las distintas partes.
+
+
+Estaria dividido en 4 layers, de arriba abajo:
+    C - Content
+    S - Shape : Trapezoide "Rhombus" Blanco o "Reja" pensando en un andamio
+    L - Light : Forma q copia a la capa de arriba pero esta con un alpha alto, difuminada y bordes redondeados para q al pasar sobre le background de un efecto parecido a q la Shape este iluminandolo.
+    B - Background
+
+
+Y 3 estados:
+    + Normal
+    + Dakar
+    + Holidays
+
+
++ Normal
+    S:
+        El trapezoide zigzagea arrancando en la esquina sup der debajo de la nav, aproximadamente usando el ancho del Content, pero su inicio y fin quedan afuera de este, que llegue al fondo del lado izq y luego se despliegue para la derecha al estilo el logo de Adidas dejando otros trapezoides que contienen redes sociales, etc, distintas partes del footer.
+        La animacion funciona con el scoll pero solo ejecuta 1 vez y hasta llegar abajo, no vuelve atras.
+
+    B:
+        El fondo de azulejos pensado en el wireframe, usando el swatch.
+            https://coolors.co/0397d1-6296ba-f2fbff-eee8a9-222222
+
+
++ Dakar
+    Color Swatch cambiaria un poco para agregar marrones.
+
+    S:
+        2 Ideas:
+            - Usar un Trapezoide romboidal invisible q a su vez tiene 4 en sus 4 vertices y asi simular huellas de ruedas usando una textura para generar una estela suave color tierra. Posiblemente necesite hacer un zigzag más acotado y coherente al fondo.
+
+            - Retocar la Shape del estado Normal para q paresca mas un pañuelo largo sucio de tierra, con dobleces, sin arrugas, etc. Que haga el zigzag d siempre pero al llegar abajo toma la forma del turbante del Dakar y luego se estira la seccion final del turbante a la derecha para crear las partes del footer como en el estado normal, tal vez esta vez con retoques como si fueran stickers o sino bordado del turbante.
+
+            Por ahora intentar con el turbante.
+
+    B:
+        De fondo un mapa q tenga algo que ver con el Dakar
+
+
++ Holidays
+    Nuevamente el color swatch cambiaria un poco, tal vez agregando colores "navideños", rojo, verde, blanco, dorado.
+
+    S:
+        Estrella que deja estela. Definir "landing", intentar q no sea un arbolito, creo q preferiria q termine de forma parecida al estado Normal y luego se despliegan hacia la derecha las secciones del footer pero esta vez como regalos desordenados, usando rotacion para q sobresalgan para abajo y esten des alineados pero siguiendo la idea del triangulo q cada vez los elementos son más pequeños a medida q van para la derecha.
+
+    B:
+        3 Ideas:
+            - Puede ser el mismo Bg que el estado Normal combinando los colores festivos.
+            - Algo parecido al punto anterior pero agregar figuras festivas a los azulejos, posiblemente Michelin y otras mascotas (no se si Michelin realmente sigue relacionado).
+            - Una animacion de foto satelital de la tierra que gira en relacion al scroll para hacer parecer q la Shape de estrella se mueve con relacion.
+
+
+Siempre dejar en la parte más baja del footer de manera prolija la direccion y telefonos, mails, redes sociales y demas armarlos como las "cards"/secciones descriptas arriba.

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diproin S.A.</title>
+  <link href="../css/main.css" type="text/css" rel="stylesheet">
+</head>
+
+
+<body>
+  <header>
+    <!-- Pasar Logo a SVG, cambiar size desde css, borrar link a inicio y ponerlo solo como imagen -->
+    <nav>
+      <a id="nLogo" href="../index.html"><img class="nav__logo" src="../img/logo2.png" alt="Inicio. DIPROIN Logo."></a>
+      <a id="nav1" class="nav__Text" href="contact.html">· Contacto ·</a>
+      <a id="nav2" class="nav__Text" href="about.html">· Nosotros ·</a>
+      <a id="nav3" class="nav__Text" href="products.html">· Productos ·</a>
+      <a id="nav4" class="nav__Text" href="services.html">· Servicios ·</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Reemplazar por Google Sheet y tal vez luego por conexion a base de datos aunque g sheet parece mas comodo para la gente d DIPROIN -->
+    <!-- WIP -->
+    <div style="background-color: #fff; color: #222; width: 100%; height: 100px; text-align: center; border: 1px solid #222;">
+      Colocar Selection Preview.
+    </div>
+    <iframe class="products-table" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSbaoWtiVBPBbO0-hv9NfRpNzODoUDRro-sdUQT-SSBup-NVnI_UHKf5OW2jqZ5DXb1c2e8fQ95SdQo/pubhtml?widget=true&amp;headers=false"></iframe>
+  </main>
+
+  <footer>
+    <!-- Aquí cada Card abriria un vinculo a por ejemplo whatsapp web, twitter web o app, etc -->
+    <!-- Mail, Phone y otros q tengan 2 direcciones q esten divididos en 2 zonas clickeables -->
+    <!-- footContact llevaria a contact.html -->
+    <!-- Analizar si usar Font Awesome <i> o svgs <img> <svg>-->
+    <!-- Mejorar los colores buscando un intermedio/funcion math entre los colores officiales y la paleta utilizada-->
+    <div class="foot__CardsDiv">
+      <div id="footContact" class="foot__Card">
+        <a href="contact.html"><img src="../svg/map_marker.svg" alt="Contacto"></a><!-- entre las <i> deberia poner algun texto o algo tipo el alt para las fotos? -->
+      </div>
+      <div id="footPhone" class="foot__Card">
+        <a href="contact.html"><img src="../svg/phone-auricular.svg" alt="Telefonos"></a>
+      </div>
+      <div id="footMail" class="foot__Card">
+        <a href="contact.html"><img src="../svg/e-mail.svg" alt="e-Mails"></a>
+      </div>
+      <div id="footTwitter" class="foot__Card">
+        <a href="contact.html"><img src="../svg/twitter-encircled-black.svg" alt="Twitter"></a>
+      </div>
+      <div id="footWhatsApp" class="foot__Card">
+        <a href="contact.html"><img src="../svg/whatsApp-simple-black.svg" alt="WhatsApp"></a>
+      </div>
+      <div id="footLinkedIn" class="foot__Card">
+        <a href="contact.html"><img src="../svg/linkedIn.svg" alt="LinkedIn"></a>
+      </div>
+   </div>
+    <!-- No se si mi "firma" deberia estar dentro del footer o abajo o en alguna otra div -->
+    <!-- Q Sea un rombo o diamante muy chiquito, tal vez q calse dentro del patron del fondo como un agregado a los azulejos -->
+    <!-- <div class="madeBy" onMouseOver="this.style.width='444px'" onMouseOut="this.style.width='33px'"> -->
+    <p>España 1942. Rosario, Santa Fe. Argentina. Código Postal (S2000GBF). Tel:(0341)4815342/4823813</p><!-- Mejorar -->
+    <div class="madeBy">
+      Agregar Logotipo con link a mi porfolio, solo en index.
+    </div>
+  </footer>
+</body>
+</html>

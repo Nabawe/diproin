@@ -1,0 +1,33 @@
++ Agregar en about.html o index.html "Firma" o Logo mio q redireccione a mi porfolio, git, contacto y demas.
++ Combinar about.html con team.html.
++ Aside para testimonios y Twitter feed usando grid.
++ Flex Cards para el contenido en Index, Services.
++ Contenido usando markdown para q lo puedan agregar de forma dinamica. Si es mucho pedir usar Google Docs q pasen por una CSS.
++ Locales, por si por ejemplo Brazilero o alguien q prefiere Ingles usa la Web.
++ Mover logo dentro de la Nav y q sea el link a Index.
++ Mover contact a la izquierda del footer, leyenda "Contacto y mapa" o "Expandir Contacto".
+? Modificar el style del mapa desde CSS. En especial width y height para q sean unidades relativas, con forma rectangular en pantallas landscape y cuadrada en portrait, revisar q no se superponga con otros elementos, ¿sera q necesita unidades fijas antes de cargar?.
+? Las cosas q hemos dado de media querry como reacionaran a el cambio de landscape y portrait en los celulares, tablets, ultrabooks, etc.
+? Tendria que agregar una layout para SmartWatches?
++ Revisar casos donde seria inteligente usar min y max width y height. Como propiedad y no como Media Query. Para por ejemplo determinar el verdadero tamaño minimo con el q se desea mostrar el sitio.
+? Meditar si hacer paleta de colores de alto contraste para celulares, e-ink, discapacidad.
+    OLD : [Algo importante para conciderar seria usar colores con mas contraste para pantallas de celular o tablets asi ayuda a leer con luz de sol y etc]
++ Medidas Standard Más Comunes 320px 480px 600px 768px 1024px 1200px
+    es 320 o 360 la minima a conciderar? 320 parece ser la medida de un iPhone viejo.
+    Algunas personas hablan de empesar en 576 y hasta hay gente q pone 768.
+    Averiguar bien para definirlo a futuro.
++ Decidir si poner un boton flotante back to top o si la nav queda siempre visible
+    Creo q seria mejor q la nav se vuelva una "mini nav" con los elementos bien chatos y q quede siempre visible, ya q con las modificaciones anteriores queda bien simplificada, pero de hacer esto por ahi sea mejor q quede contact arriba.
+    OLD : [Que sea corrediza en la ver de celular y no un menu, dejando el logo estatico para volver]
++ Optimizar Fonts, ver si aplicar Noto o no, ver otras opciones.
++ Eliminar todos las br.
++ Extraer los iconos de las redes sociales y etc y crear una carpeta ico aun si son "fuentes".
++ SVGs:
+    - Modificar SVG usando svg tag.
+    - Alguna propierdad para q la transformacion del elemento anidado no sea aplicada.
+    - Unnest img y luego alinear.
+    - fab icon.
++ Colocar buen h1 y h2 en todas las paginas luego de aprender un poco mas de SEO
+! Preguntar sobre licencias y legal
+! Archivos binarios y optimizacion
+! Preguntar sobre localization

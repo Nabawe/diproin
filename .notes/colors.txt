@@ -1,0 +1,13 @@
+mycolor.space - Discreet + #222 + #fff(es el blanco del logo)
+    https://coolors.co/0397d1-6296ba-f2fbff-eee8a9-222222
+
+
+https://mycolor.space/?hex=%230397D1&sub=1
+    Discreet + #222
+    Natural
+    Pin
+    May be Spot too?
+
+https://coolors.co/0397d1-ffffff-efa00b-002626-333333
+
+https://material.io/resources/color/#!/?view.left=0&view.right=1&primary.color=6296ba&secondary.color=0397d1&primary.text.color=f2fbff&secondary.text.color=f2fbff

@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+$color-Main: #0397D1;
+$color-LogoWhite: #fff;
+$color-BG: #6296BA;
+$color-Accent: #F2FBFF;
+$color-Highlight: #EEE8A9;
+$color-Text: #222;
+
+/* Para no olvidarme q existe */
+/* :root {
+} */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+/* +Defaults */
+  html {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    background-color: $color-BG;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;/* ESTO ES UN RECORDATORIO YA Q VEO PROBLEMAS POR ESTAS 2 lineas Aquí primero no estoy completamente seguro si deberia usar flexbox por defecto para Mobile First y segundo no estoy seguro si usar items o content para body o ambos?  */
+    align-items: center;
+
+    p {
+      color: $color-Text;
+    }
+
+    h2, h3, h4 {
+      color: $color-Accent;
+    }
+  }
+/* + */
+
+
+/* +Header */
+  header {
+    width: 95%;
+
+    nav {
+      display: grid;
+      gap: 5px;
+      grid-template-areas:
+        "nLogo nav1 nav2"
+        "nLogo nav3 nav4"
+      ;
+      align-items: center;
+    }
+
+    nav a:hover {
+      color: $color-Highlight;
+    }
+  }
+
+  .nav__logo {
+    height: 5rem;
+  }
+
+  .nav__Text {
+    min-width: 110px;
+    color: $color-Accent;
+    text-decoration: none;
+    /* border: 2px solid #0397d1; */
+    background-color: #0397d1;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 3% 0px;
+    padding-bottom: 4%;
+  }
+
+  #nLogo {
+    border: none;
+    background-color: unset;
+    grid-area: nLogo;
+    padding: 0px;
+    margin-top: 4%;
+    justify-self: left;
+  }
+
+  #nav1 {
+    grid-area: nav1;
+  }
+
+  #nav2 {
+    grid-area: nav2;
+  }
+
+  #nav3 {
+    grid-area: nav3;
+  }
+
+  #nav4 {
+    grid-area: nav4;
+  }
+/* + */
+
+
+/* +Main */
+  main {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 100px; /* Para separar en todas las pag el Footer del contenido */
+    display: flex;
+    flex-direction: column; /* Arreglar error para q no quede corrido sobre la izquierda */
+    justify-items: center;
+    align-items: center;
+    gap: 10px; /* Quitar esto una ver removidos los WIP ya q las section agregan marging */
+    /* RECORDATORIO justify-content: center;
+    align-content: center; *//* Tal vez necesite estas 2 aquí ? */
+
+    section {
+      width: 100%;
+      height: auto;
+      background-color: $color-Main;
+      box-shadow: 3px 3px 2px 4px rgba(34, 34, 34, 0.600); /* es #222 con 0.6 de alpha */
+      border-radius: 4px;
+      padding: 5px;
+      margin: 10px 0px;
+    }
+  }
+/* + */
+
+
+/* +Footer */
+  footer {
+    width: 100%; /* RECORDATORIO No se si es necesaria esta linea, definir si es 100 95 80 */
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    p {
+      color: $color-Accent;
+      text-align: center;
+    }
+  }
+
+  .foot__CardsDiv {
+    width: 100%;
+    /* height: 20%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-wrap: wrap; /* Mejorar, tal vez sea necesario usar grids para q queden comodamente distribuidos en 2 lineas */
+    gap: 5px;
+  }
+
+  .foot__Card {
+    width: 100px;/* usar medidas relativas */
+    height: 70px;
+    transform: skew(30deg);
+    background-color: $color-Accent;
+
+    a img { /* Mejorar o usar fontawesome */
+      /* usar modificadores svg ? */
+      width: 90%;
+      height: 90%;
+    }
+  }
+
+  #footContact {
+    width: 120px; /* usar medidas relativas */
+    height: 90px; /* Dejar q se escapen un poco las puntas, por ahi cambie d opinon luego */
+    transform: skew(145deg);
+    margin-right: 15px; /* Q haya un poco d superposicion en las puntas */
+    z-index: 1;
+  }
+
+  .madeBy {
+    width: 33px;
+    height: 33px;
+    transform: scaleY(5.01);/* Intentando crear forma de diamante y fallando horriblemente hay otras scales en el documento team.html por mas q lo voy a sacar despues */
+    transform: rotate(45deg);
+    background-color: $color-Accent;
+    color: $color-Text;
+    text-align: center;
+    border: 1px solid $color-Text;
+    overflow:hidden;
+    transition: 260ms;
+  }
+
+  .madeBy:hover { /* Sacar y limpiar esto luego */
+    width: 444px;
+  }
+/* + */
+
+
+/* +Index */
+
+/* + */
+
+
+/* +Products */
+
+/* + */
+
+
+/* +Services */
+
+/* + */
+
+
+/* +Media Querries */
+  /* RECORDATORIO A futuro pensar, 3 medidas de celulares, 2 de phablets, 4 de tablets, 2 de notebook 16:10 y 16:9, 4 de PC, 4 de TV, 2 cuadradas universales para todos los dispositivos q usen pantallas cuadradas. ¿Tiene algo de sentido lo q puse recien o solo estoy desperdiciando tiempo? ¿Hay algun sitio q haga analisis y me diga a q apuntar para X producto/tipo de pagina? */
+
+  @media only screen and (min-width:1024px) {
+    header {
+      width: 90%;
+
+      nav {
+        display: grid;
+        gap: 20px;
+        grid-template-areas:
+          "nLogo nav1 nav2 nav3 nav4"
+        ;
+      }
+    }
+
+    .nav__Text {
+      font-size: 1.5rem;
+    }
+
+    #nLogo {
+      border: none;
+      background-color: unset;
+      grid-area: nLogo;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    main.asideGrid {
+      /* flex: none; */ /* ¿Es necesario? */
+      display: grid;
+      gap: 20px;
+      grid-template-areas:
+        "sec1 aside"
+        "sec2 aside"
+      ;
+      /* align-items: center; */
+      /* justify-items: center; */
+    }
+
+    main section {
+      margin: 0px 0px;
+    }
+  }
+
+  section.sec1 {
+    grid-area: sec1;
+  }
+  section.sec2 {
+    grid-area: sec2;
+  }
+  section.aside {
+    grid-area: aside;
+  }
+/* + */
+
+
+.main__article--strikeThrough { /* quitar BEM */
+  text-decoration: line-through;
+  color: $color-Highlight;
+}

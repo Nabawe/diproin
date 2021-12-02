@@ -1,0 +1,4 @@
+Preview de seleccion arriba de la google sheet.
+
+Q sea vertical como estaba hecha la tabla para comparar con mas facilidad con otros productos.
+Hacer algo q permita agregar las divisiones o "mirror" q permite desplazar la tabla pero dejando fija en un solo lado una columna y permitir agregar mas columnas para poder comparar distintos productos, va a necesitar algun tipo de scroll para poder ir para adelante o atras cuando se valla agregando para comparar.

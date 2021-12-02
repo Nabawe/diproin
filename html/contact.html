@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diproin S.A.</title>
+  <link href="../css/main.css" type="text/css" rel="stylesheet">
+</head>
+
+
+<body>
+  <header>
+    <!-- Pasar Logo a SVG, cambiar size desde css, borrar link a inicio y ponerlo solo como imagen -->
+    <nav>
+      <a id="nLogo" href="../index.html"><img class="nav__logo" src="../img/logo2.png" alt="Inicio. DIPROIN Logo."></a>
+      <a id="nav1" class="nav__Text" href="contact.html">· Contacto ·</a>
+      <a id="nav2" class="nav__Text" href="about.html">· Nosotros ·</a>
+      <a id="nav3" class="nav__Text" href="products.html">· Productos ·</a>
+      <a id="nav4" class="nav__Text" href="services.html">· Servicios ·</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- WIP -->
+    <!-- Ojo con los bordes de las Cards, fijarse q sea consistente con como se muestra el mapa -->
+    <div style="background-color: #fff; color: #222; width: 80%; height: 400px; text-align: center; border: 1px solid #222;">
+      Colocar aqui las tarjetas de redes sociales y demas de forma desplegada y bien legible.
+    </div>
+    <!-- Sacar o modificar el banner q aparece arriba a la izq, ocupa mucho espacio, revisar paginas de ayuda d google q seguro especifican como style it. Modificar Zoom, dejar bien centrado -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11929.900199260843!2d-60.65573063646037!3d-32.9585341733401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab0d194a7ce7%3A0xf81dee88ab451569!2sDIPROIN%20Sociedad%20An%C3%B3nima!5e0!3m2!1sen!2sar!4v1636414074073!5m2!1sen!2sar" width="80%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </main>
+
+  <footer>
+    <!-- Aquí cada Card abriria un vinculo a por ejemplo whatsapp web, twitter web o app, etc -->
+    <!-- Mail, Phone y otros q tengan 2 direcciones q esten divididos en 2 zonas clickeables -->
+    <!-- footContact llevaria a contact.html -->
+    <!-- Analizar si usar Font Awesome <i> o svgs <img> <svg>-->
+    <!-- Mejorar los colores buscando un intermedio/funcion math entre los colores officiales y la paleta utilizada-->
+    <div class="foot__CardsDiv">
+      <div id="footContact" class="foot__Card">
+        <a href="contact.html"><img src="../svg/map_marker.svg" alt="Contacto"></a><!-- entre las <i> deberia poner algun texto o algo tipo el alt para las fotos? -->
+      </div>
+      <div id="footPhone" class="foot__Card">
+        <a href="contact.html"><img src="../svg/phone-auricular.svg" alt="Telefonos"></a>
+      </div>
+      <div id="footMail" class="foot__Card">
+        <a href="contact.html"><img src="../svg/e-mail.svg" alt="e-Mails"></a>
+      </div>
+      <div id="footTwitter" class="foot__Card">
+        <a href="contact.html"><img src="../svg/twitter-encircled-black.svg" alt="Twitter"></a>
+      </div>
+      <div id="footWhatsApp" class="foot__Card">
+        <a href="contact.html"><img src="../svg/whatsApp-simple-black.svg" alt="WhatsApp"></a>
+      </div>
+      <div id="footLinkedIn" class="foot__Card">
+        <a href="contact.html"><img src="../svg/linkedIn.svg" alt="LinkedIn"></a>
+      </div>
+   </div>
+    <!-- No se si mi "firma" deberia estar dentro del footer o abajo o en alguna otra div -->
+    <!-- Q Sea un rombo o diamante muy chiquito, tal vez q calse dentro del patron del fondo como un agregado a los azulejos -->
+    <!-- <div class="madeBy" onMouseOver="this.style.width='444px'" onMouseOut="this.style.width='33px'"> -->
+    <p>España 1942. Rosario, Santa Fe. Argentina. Código Postal (S2000GBF). Tel:(0341)4815342/4823813</p><!-- Mejorar -->
+    <div class="madeBy">
+      Agregar Logotipo con link a mi porfolio, solo en index.
+    </div>
+  </footer>
+</body>
+</html>
