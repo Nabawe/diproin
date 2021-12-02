@@ -35,3 +35,4 @@
 + Pasar de favicon.ico a los 3 o 4 tamaños en png
     https://diblet.com/blog/como-incluir-correctamente-un-favicon/
     https://realfavicongenerator.net/
++ Optimize Site Map or make manually.
