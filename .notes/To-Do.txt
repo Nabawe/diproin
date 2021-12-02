@@ -1,5 +1,5 @@
-+ Agregar en about.html o index.html "Firma" o Logo mio q redireccione a mi porfolio, git, contacto y demas.
-+ Combinar about.html con team.html.
++ Agregar en nosotros.html o index.html "Firma" o Logo mio q redireccione a mi porfolio, git, contacto y demas.
++ Combinar nosotros.html con team.html.
 + Aside para testimonios y Twitter feed usando grid.
 + Flex Cards para el contenido en Index, Services.
 + Contenido usando markdown para q lo puedan agregar de forma dinamica. Si es mucho pedir usar Google Docs q pasen por una CSS.
@@ -27,7 +27,11 @@
     - Alguna propierdad para q la transformacion del elemento anidado no sea aplicada.
     - Unnest img y luego alinear.
     - fab icon.
-+ Colocar buen h1 y h2 en todas las paginas luego de aprender un poco mas de SEO
++ Colocar buen h1 y h2 en todas las paginas luego de aprender un poco mas de SEO.
++ Colocar mini texto debajo de logo q diga inicio.
 ! Preguntar sobre licencias y legal
 ! Archivos binarios y optimizacion
 ! Preguntar sobre localization
++ Pasar de favicon.ico a los 3 o 4 tamaños en png
+    https://diblet.com/blog/como-incluir-correctamente-un-favicon/
+    https://realfavicongenerator.net/
