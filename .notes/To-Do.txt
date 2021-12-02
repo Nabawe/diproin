@@ -31,5 +31,3 @@
 ! Preguntar sobre licencias y legal
 ! Archivos binarios y optimizacion
 ! Preguntar sobre localization
-
-+ Yay this is an edit from da Cloud!!!
