@@ -10,3 +10,4 @@
 + Shortcut and favicon.
 + Todas las imagenes tiene  el atributo alt completado.
 + Site Map.
++ Logo to SVG. Add minitext · Inicio ·
