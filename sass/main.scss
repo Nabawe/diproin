@@ -164,7 +164,7 @@ $color-Text: #222;
     }
   }
 
-  .foot__CardsDiv {
+  .foot__cardsBelt {
     width: 100%;
     /* height: 20%; */
     display: flex;
@@ -175,13 +175,14 @@ $color-Text: #222;
     gap: 5px;
   }
 
-  .foot__Card {
-    width: 100px;/* usar medidas relativas */
+  .foot__card {
+    width: 100px;
     height: 70px;
     transform: skew(30deg);
     background-color: $color-Accent;
     border: 2px solid #444;
     border-radius: 4px;
+    padding: 5px 0px 0px 5px;
 
     a img { /* Mejorar o usar fontawesome */
       /* usar modificadores svg ? */
@@ -289,18 +290,18 @@ $color-Text: #222;
       /* justify-items: center; */
     }
 
+    section.sec1 {
+      grid-area: sec1;
+    }
+    section.sec2 {
+      grid-area: sec2;
+    }
+    section.aside {
+      grid-area: aside;
+    }
+
     main section {
       margin: 0px 0px;
     }
-  }
-
-  section.sec1 {
-    grid-area: sec1;
-  }
-  section.sec2 {
-    grid-area: sec2;
-  }
-  section.aside {
-    grid-area: aside;
   }
 /* + */
