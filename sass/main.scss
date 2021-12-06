@@ -34,7 +34,7 @@ $color-Text: #222;
     background-color: $color-BG;
     display: flex;
     flex-direction: column;
-    justify-items: center;/* ESTO ES UN RECORDATORIO YA Q VEO PROBLEMAS POR ESTAS 2 lineas Aquí primero no estoy completamente seguro si deberia usar flexbox por defecto para Mobile First y segundo no estoy seguro si usar items o content para body o ambos?  */
+    justify-items: center;/* ESTO ES UN RECORDATORIO YA Q VEO PROBLEMAS POR ESTAS 2 lineas Aquí primero no estoy completamente seguro si deberia usar flexbox por defecto para Mobile First y segundo no estoy seguro si usar items o content para body?  */
     align-items: center;
 
     p {
@@ -54,10 +54,13 @@ $color-Text: #222;
 
     nav {
       display: grid;
-      gap: 5px;
+      gap: 0px 13px;
       grid-template-areas:
-        "nLogo nav1 nav2"
-        "nLogo nav3 nav4"
+        "nav__logo .    .    ."
+        "nav__logo nav1 nav2 ."
+        "nav__logo .    .    ."
+        "nav__logo nav3 nav4 ."
+        "nav__logo .    .    ."
       ;
       align-items: center;
     }
@@ -67,30 +70,40 @@ $color-Text: #222;
     }
   }
 
-  .nav__logo {
-    height: 5rem;
+  .nav__logo--svg {
+    height: 7rem;
   }
 
   .nav__Text {
     min-width: 110px;
+    // max-width: 144px;
+    // width: 5rem;
+    font-size: 0.9rem;
     color: $color-Accent;
     text-decoration: none;
-    /* border: 2px solid #0397d1; */
     background-color: #0397d1;
     border-radius: 10px;
-    font-size: 0.9rem;
     text-align: center;
     padding: 3% 0px;
     padding-bottom: 4%;
   }
 
-  #nLogo {
+  .nav__logo--svg--miniText {
+    font-size: 0.9rem;
+    color: $color-Accent;
+    text-align: center;
+    position: relative;
+    bottom: 1.5rem;
+  }
+
+  #nav__logo {
     border: none;
     background-color: unset;
-    grid-area: nLogo;
+    grid-area: nav__logo;
     padding: 0px;
     margin-top: 4%;
     justify-self: left;
+    text-decoration: none;
   }
 
   #nav1 {
@@ -237,22 +250,29 @@ $color-Text: #222;
       width: 90%;
 
       nav {
-        display: grid;
-        gap: 20px;
+        gap: 0px 40px;
         grid-template-areas:
-          "nLogo nav1 nav2 nav3 nav4"
+          "nav__logo nav1 nav2 nav3 nav4"
+          "nav__logo .    .    .    ."
         ;
       }
     }
 
-    .nav__Text {
-      font-size: 1.5rem;
+    .nav__logo--svg {
+      height: 10rem;
     }
 
-    #nLogo {
+    .nav__Text {
+      min-width: 256px;
+      font-size: 1.5rem;
+      position: relative;
+      top: 5px;
+    }
+
+    #nav__logo {
       border: none;
       background-color: unset;
-      grid-area: nLogo;
+      grid-area: nav__logo;
       padding: 0px;
       margin: 0px;
     }

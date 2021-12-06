@@ -26,7 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  /* ESTO ES UN RECORDATORIO YA Q VEO PROBLEMAS POR ESTAS 2 lineas Aquí primero no estoy completamente seguro si deberia usar flexbox por defecto para Mobile First y segundo no estoy seguro si usar items o content para body o ambos?  */
+  /* ESTO ES UN RECORDATORIO YA Q VEO PROBLEMAS POR ESTAS 2 lineas Aquí primero no estoy completamente seguro si deberia usar flexbox por defecto para Mobile First y segundo no estoy seguro si usar items o content para body?  */
   align-items: center;
 }
 body p {
@@ -43,38 +43,46 @@ header {
 }
 header nav {
   display: grid;
-  gap: 5px;
-  grid-template-areas: "nLogo nav1 nav2" "nLogo nav3 nav4";
+  gap: 0px 13px;
+  grid-template-areas: "nav__logo .    .    ." "nav__logo nav1 nav2 ." "nav__logo .    .    ." "nav__logo nav3 nav4 ." "nav__logo .    .    .";
   align-items: center;
 }
 header nav a:hover {
   color: #EEE8A9;
 }
 
-.nav__logo {
-  height: 5rem;
+.nav__logo--svg {
+  height: 7rem;
 }
 
 .nav__Text {
   min-width: 110px;
+  font-size: 0.9rem;
   color: #F2FBFF;
   text-decoration: none;
-  /* border: 2px solid #0397d1; */
   background-color: #0397d1;
   border-radius: 10px;
-  font-size: 0.9rem;
   text-align: center;
   padding: 3% 0px;
   padding-bottom: 4%;
 }
 
-#nLogo {
+.nav__logo--svg--miniText {
+  font-size: 0.9rem;
+  color: #F2FBFF;
+  text-align: center;
+  position: relative;
+  bottom: 1.5rem;
+}
+
+#nav__logo {
   border: none;
   background-color: unset;
-  grid-area: nLogo;
+  grid-area: nav__logo;
   padding: 0px;
   margin-top: 4%;
   justify-self: left;
+  text-decoration: none;
 }
 
 #nav1 {
@@ -218,19 +226,25 @@ footer p {
     width: 90%;
   }
   header nav {
-    display: grid;
-    gap: 20px;
-    grid-template-areas: "nLogo nav1 nav2 nav3 nav4";
+    gap: 0px 40px;
+    grid-template-areas: "nav__logo nav1 nav2 nav3 nav4" "nav__logo .    .    .    .";
+  }
+
+  .nav__logo--svg {
+    height: 10rem;
   }
 
   .nav__Text {
+    min-width: 256px;
     font-size: 1.5rem;
+    position: relative;
+    top: 5px;
   }
 
-  #nLogo {
+  #nav__logo {
     border: none;
     background-color: unset;
-    grid-area: nLogo;
+    grid-area: nav__logo;
     padding: 0px;
     margin: 0px;
   }

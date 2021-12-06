@@ -7,6 +7,7 @@
     re rutie todos los attributos href y src para q empiesen con / en vez d con indicadores relativos como .. (q los usaba antes)
 + meta keywords for all pages.
 + meta description for all pages.
++ meta name="robots", meta name="language"
 + Shortcut and favicon.
 + Todas las imagenes tiene  el atributo alt completado.
 + Site Map.

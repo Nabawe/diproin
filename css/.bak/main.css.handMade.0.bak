@@ -53,8 +53,8 @@
     display: grid;
     gap: 5px;
     grid-template-areas:
-      "nLogo nav1 nav2"
-      "nLogo nav3 nav4"
+      "nav__logo nav1 nav2"
+      "nav__logo nav3 nav4"
     ;
     align-items: center; /* No me quedan bien las alineaciones del texto. */
     /* Y los botones me quedan en tamaños desiguales, estoy intentando evitar usar una medida absoluta d width */
@@ -81,10 +81,10 @@
     padding-bottom: 4%; /* Sin esto queda mal la alineacion vertical. ¿Recomendacion? */
   }
 
-  #nLogo {
+  #nav__logo {
     border: none;
     background-color: unset;
-    grid-area: nLogo;
+    grid-area: nav__logo;
     padding: 0px;
     margin-top: 4%; /* Nuevamente use esto pork sino quedaba mal "align" */
     justify-self: left; /* Otra propiedad q si no ponia quedaba mal en 360. En realidad queria mover las <a> de la nav q no son el logo más cerca del lado der del logo pero agregando la menor cantidad de codigo y en especial sin modificar el html. ¿Recomendacion? */
@@ -263,7 +263,7 @@
       display: grid;
       gap: 20px;
       grid-template-areas:
-        "nLogo nav1 nav2 nav3 nav4"
+        "nav__logo nav1 nav2 nav3 nav4"
       ;
     }
 
@@ -271,10 +271,10 @@
       font-size: 1.5rem;
     }
 
-    #nLogo {
+    #nav__logo {
       border: none;
       background-color: unset;
-      grid-area: nLogo;
+      grid-area: nav__logo;
       padding: 0px;
       margin: 0px;
     }

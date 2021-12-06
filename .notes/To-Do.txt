@@ -28,7 +28,7 @@
     - Unnest img y luego alinear.
     - fab icon.
 + Colocar buen h1 y h2 en todas las paginas luego de aprender un poco mas de SEO.
-+ Colocar mini texto debajo de logo q diga inicio.
++ Colocar mini texto debajo de logo q diga "· Inicio ·".
 ! Preguntar sobre licencias y legal
 ! Archivos binarios y optimizacion
 ! Preguntar sobre localization
@@ -36,3 +36,4 @@
     https://diblet.com/blog/como-incluir-correctamente-un-favicon/
     https://realfavicongenerator.net/
 + Optimize Site Map or make manually.
++ DIPROIN_logo.svg la fuente en realidad creo q tendria q ser alguna de "consola" tambien fue bastante hecho a mano habria q rehacerlo de 0 de forma simetrica perfecta.
