@@ -287,6 +287,9 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
 
 
 /* +Index */
+  #index-news {
+    max-width: 1200px;
+  }
 
 /* + */
 
@@ -351,8 +354,8 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
       display: grid; /* ¿Causa algun problema si coloco grid SOLO aquí? o sea no esta puesto en "Mobile" ya q no la usa, es una curiocidad. */
       gap: 20px;
       grid-template-areas:
-        "sec1 aside"
-        "sec2 aside"
+        "sec1 ."
+        "sec1 sec2"
       ;
       /* align-items: center; */
       /* justify-items: center; */
@@ -363,9 +366,6 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
     }
     section.sec2 {
       grid-area: sec2;
-    }
-    section.aside {
-      grid-area: aside;
     }
 
     main section {
