@@ -40,3 +40,4 @@
 + Footer
     <!-- Mail, Phone y otros q tengan 2 direcciones q esten divididos en 2 zonas clickeables -->
     <!-- Mejorar los colores buscando un intermedio/funcion math entre los colores officiales y la paleta utilizada-->
++ SEO agregar a las keywords productos reprecentativos.
