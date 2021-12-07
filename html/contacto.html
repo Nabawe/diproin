@@ -40,35 +40,48 @@
   </main>
 
   <footer>
-    <!-- Aquí cada Card abriria un vinculo a por ejemplo whatsapp web, twitter web o app, etc -->
-    <!-- Mail, Phone y otros q tengan 2 direcciones q esten divididos en 2 zonas clickeables -->
-    <!-- footContact llevaria a contacto.html -->
-    <!-- Analizar si usar Font Awesome <i> o svgs <img> <svg>-->
-    <!-- Mejorar los colores buscando un intermedio/funcion math entre los colores officiales y la paleta utilizada-->
-    <div class="foot__cardsBelt">
-      <div id="footContact" class="foot__card">
-        <a href="../html/contacto.html"><img src="../svg/map_marker.svg" alt="Contacto"></a><!-- entre las <i> deberia poner algun texto o algo tipo el alt para las fotos? -->
+    <div class="footer__cardsBelt">
+      <div id="footer__contact">
+        <a href="../html/contacto.html">
+          <div id="footer__contact--shape" class="cardsBelt__card--shape"></div>
+          <img src="../svg/map_marker.svg" alt="Contacto">
+        </a>
       </div>
-      <div id="footPhone" class="foot__card">
-        <a href="../html/contacto.html"><img src="../svg/phone-auricular.svg" alt="Telefonos"></a>
+      <div id="footer__phone" class="cardsBelt__card--align">
+        <a href="tel:0341-4815342">
+          <div class="cardsBelt__card--shape"></div>
+          <img src="../svg/phone-auricular.svg" alt="Telefonos">
+        </a>
       </div>
-      <div id="footMail" class="foot__card">
-        <a href="../html/contacto.html"><img src="../svg/e-mail.svg" alt="e-Mails"></a>
+      <div id="footer__email" class="cardsBelt__card--align">
+        <a href="mailto:diproin@diproinsa.com.ar">
+          <div class="cardsBelt__card--shape"></div>
+          <img src="../svg/e-mail.svg" alt="e-Mails">
+        </a>
       </div>
-      <div id="footTwitter" class="foot__card">
-        <a href="../html/contacto.html"><img src="../svg/twitter-encircled-black.svg" alt="Twitter"></a>
+      <div id="footer__Twitter" class="cardsBelt__card--align">
+        <a href="https://twitter.com/">
+          <div class="cardsBelt__card--shape"></div>
+          <img src="../svg/twitter-encircled-black.svg" alt="Twitter">
+        </a>
       </div>
-      <div id="footWhatsApp" class="foot__card">
-        <a href="../html/contacto.html"><img src="../svg/whatsApp-simple-black.svg" alt="WhatsApp"></a>
+      <div id="footer__WhatsApp" class="cardsBelt__card--align">
+        <a href="https://www.whatsapp.com/">
+          <div class="cardsBelt__card--shape"></div>
+          <img src="../svg/whatsApp-simple-black.svg" alt="WhatsApp">
+        </a>
       </div>
-      <div id="footLinkedIn" class="foot__card">
-        <a href="../html/contacto.html"><img src="../svg/linkedIn.svg" alt="LinkedIn"></a>
+      <div id="footer__LinkedIn" class="cardsBelt__card--align">
+        <a href="https://www.linkedin.com/">
+          <div class="cardsBelt__card--shape"></div>
+          <img src="../svg/linkedIn.svg" alt="LinkedIn">
+        </a>
       </div>
     </div>
-    <!-- No se si mi "firma" deberia estar dentro del footer o abajo o en alguna otra div -->
-    <!-- Q Sea un rombo o diamante muy chiquito, tal vez q calse dentro del patron del fondo como un agregado a los azulejos -->
     <!-- <div class="madeBy" onMouseOver="this.style.width='444px'" onMouseOut="this.style.width='33px'"> -->
-    <p>España 1942. Rosario, Santa Fe. Argentina. Código Postal (S2000GBF). Tel:(0341)4815342/4823813</p><!-- Mejorar -->
+    <p>España 1942, Rosario, Santa Fe, Argentina.</p>
+    <p>Código Postal S2000GBF</p>
+    <p>Tel: (0341) 4815342  o  4823813</p>
   </footer>
 </body>
 </html>

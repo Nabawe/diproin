@@ -7,12 +7,14 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');/* Error 404 logo */
 
-$color-Main: #0397D1;
-$color-LogoWhite: #fff;
+$color-main: #0397D1;
+$color-logoWhite: #fff;
 $color-BG: #6296BA;
-$color-Accent: #F2FBFF;
-$color-Highlight: #EEE8A9;
-$color-Text: #222;
+$color-accent: #F2FBFF;
+$color-highlight: #EEE8A9;
+$color-text: #222;
+$color-btn-border: #444;
+$color-footerBtn-hover: rgba(147, 150, 158, 0.972);
 
 /* Para no olvidarme q existe */
 /* :root {
@@ -38,11 +40,11 @@ $color-Text: #222;
     align-items: center;
 
     p {
-      color: $color-Text;
+      color: $color-text;
     }
 
     h2, h3, h4 {
-      color: $color-Accent;
+      color: $color-accent;
     }
   }
 /* + */
@@ -63,10 +65,10 @@ $color-Text: #222;
         "nav__logo .    .    ."
       ;
       align-items: center;
-    }
 
-    nav a:hover {
-      color: $color-Highlight;
+      a:hover {
+        color: $color-highlight;
+      }
     }
   }
 
@@ -79,7 +81,7 @@ $color-Text: #222;
     // max-width: 144px;
     // width: 5rem;
     font-size: 0.9rem;
-    color: $color-Accent;
+    color: $color-accent;
     text-decoration: none;
     background-color: #0397d1;
     border-radius: 10px;
@@ -90,7 +92,7 @@ $color-Text: #222;
 
   .nav__logo--svg--miniText {
     font-size: 0.9rem;
-    color: $color-Accent;
+    color: $color-accent;
     text-align: center;
     position: relative;
     bottom: 1.5rem;
@@ -104,6 +106,11 @@ $color-Text: #222;
     margin-top: 4%;
     justify-self: left;
     text-decoration: none;
+    border-radius: 10px;
+  }
+
+  #nav__logo:hover .nav__logo--svg--miniText {
+    color: $color-highlight;
   }
 
   #nav1 {
@@ -140,7 +147,7 @@ $color-Text: #222;
     section {
       width: 100%;
       height: auto;
-      background-color: $color-Main;
+      background-color: $color-main;
       box-shadow: 3px 3px 2px 4px rgba(34, 34, 34, 0.600); /* es #222 con 0.6 de alpha */
       border-radius: 4px;
       padding: 5px;
@@ -157,14 +164,15 @@ $color-Text: #222;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px 0px;
 
     p {
-      color: $color-Accent;
+      color: $color-accent;
       text-align: center;
     }
   }
 
-  .foot__cardsBelt {
+  .footer__cardsBelt {
     width: 100%;
     /* height: 20%; */
     display: flex;
@@ -172,44 +180,104 @@ $color-Text: #222;
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap; /* Mejorar, tal vez sea necesario usar grids para q queden comodamente distribuidos en 2 lineas */
-    gap: 5px;
+    gap: 10px 7px;
   }
 
-  .foot__card {
-    width: 100px;
-    height: 70px;
-    transform: skew(30deg);
-    background-color: $color-Accent;
-    border: 2px solid #444;
-    border-radius: 4px;
-    padding: 5px 0px 0px 5px;
+  .cardsBelt__card--align {
+    width: 72px;
+    height: 46px;
 
-    a img { /* Mejorar o usar fontawesome */
-      /* usar modificadores svg ? */
-      width: 90%;
-      height: 90%;
+    img {
+      width: 70%;
+      height: 70%;
+      position: relative;
+      top: -88%;
+      left: 14%;
+      transition: 600ms;
     }
   }
 
-  #footContact {
-    width: 120px; /* usar medidas relativas */
-    height: 90px; /* Dejar q se escapen un poco las puntas, por ahi cambie d opinon luego */
-    transform: skew(145deg);
-    margin-right: 15px; /* Q haya un poco d superposicion en las puntas */
+  .cardsBelt__card--align:hover {
+    // height: 34px; /* Si hago la animacion solo usando esta linea (+ transition:450ms en card--align) y sacando el bloque de img queda más prolija pero se "tilt" si dejo el mouse en la parte de arriba ya q cambia la pocision de la caja */
+    img {
+      transform: scale(0.8) translateY(60%);
+    }
+
+    /* ! Interesante q esto solo se dispare si se pasa sobre card--shape ya q card--align no tiene partes visibles ¿Porqué? */
+    /* Me pregunto si al ser un area mayor la de card--align protegera de missfires de la animacion cuando el mouse se va de la zona de card--shape pero no de card--align */
+    .cardsBelt__card--shape {
+      background: $color-footerBtn-hover;
+      transform: translateY(12px) skew(30deg); /* Transform me arruina los bordes, ¿Recomendacion? */
+    }
+  }
+
+  .cardsBelt__card--shape {
+    width: 72px;
+    height: 46px;
+    transform: skew(30deg);
+    background-color: $color-accent;
+    border: 2px solid $color-btn-border;
+    border-radius: 4px;
+    transition: 600ms;
+  }
+
+  // .cardsBelt__card--shape:hover {
+  //   background-color: $color-highlight; usar degrade radial de gris una vez resuelto
+  // }
+
+  // img:hover ~ .cardsBelt__card--shape {
+  //   background-color: $color-highlight; usar degrade radial de gris una vez resuelto
+  // }
+
+  /* Pregunta, en los HTML no le asigne afooter__contact la clase class="cardsBelt__card--align" ya q pense q podria afectar negativamente en especial creia q la imagen iba a ser afectada 2 veces por los valores de width y height, y el posicionamiento, aunque si no estoy esquivocado solo tendrian q sobre escribir. ¿Q seria lo más correcto?, en este caso no hay propiedades q sean distintas (sobren o falten) de ambos grupos. Por ahora esto me parecio lo más limpio, tal vez tendria q crear una clase unica ya q este elemento es un poco distinto. mixin? */
+  #footer__contact {
+    width: 88px;
+    height: 70px;
     z-index: 1;
+    margin-right: 4px; /* Controla la superpocicion de la esquina */
+
+    img {
+      width: 133%;
+      height: 133%;
+      position: relative;
+      top: -118%;
+      left: -16%;
+      transition: 600ms;
+    }
+  }
+
+  #footer__contact:hover {
+    img {
+      transform: scale(1.25) translateY(-14px);
+    }
+
+    #footer__contact--shape {
+      background: $color-footerBtn-hover;
+      transform: scaleY(0.8) skew(150deg) translateY(20%);
+    }
+  }
+
+  #footer__contact--shape {
+    width: 88px;
+    height: 70px;
+    transform: skew(145deg);
+    transition: 600;
   }
 
   .madeBy {
     width: 33px;
     height: 33px;
+    display: block;
     transform: scaleY(5.01);/* Intentando crear forma de diamante y fallando horriblemente hay otras scales en el documento team.html por mas q lo voy a sacar despues */
     transform: rotate(45deg);
-    background-color: $color-Accent;
-    color: $color-Text;
+    background-color: $color-accent;
+    color: $color-text;
     text-align: center;
-    border: 1px solid $color-Text;
+    border: 1px solid $color-text;
     overflow:hidden;
     transition: 260ms;
+    line-height: 30px;
+    text-decoration: none;
   }
 
   .madeBy:hover { /* Sacar y limpiar esto luego */
@@ -226,8 +294,8 @@ $color-Text: #222;
 /* +404 */
   .e404--logo {
     font-size: 20rem;
-    color: $color-Highlight;
-    text-shadow: 2px 2px 2px $color-Text;
+    color: $color-highlight;
+    text-shadow: 2px 2px 2px $color-text;
     font-family: 'Monoton', cursive;
   }
 /* + */
@@ -280,7 +348,7 @@ $color-Text: #222;
 
     main.asideGrid {
       /* flex: none; */ /* ¿Es necesario? */
-      display: grid;
+      display: grid; /* ¿Causa algun problema si coloco grid SOLO aquí? o sea no esta puesto en "Mobile" ya q no la usa, es una curiocidad. */
       gap: 20px;
       grid-template-areas:
         "sec1 aside"

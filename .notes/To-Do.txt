@@ -37,3 +37,6 @@
     https://realfavicongenerator.net/
 + Optimize Site Map or make manually.
 + DIPROIN_logo.svg la fuente en realidad creo q tendria q ser alguna de "consola" tambien fue bastante hecho a mano habria q rehacerlo de 0 de forma simetrica perfecta.
++ Footer
+    <!-- Mail, Phone y otros q tengan 2 direcciones q esten divididos en 2 zonas clickeables -->
+    <!-- Mejorar los colores buscando un intermedio/funcion math entre los colores officiales y la paleta utilizada-->
