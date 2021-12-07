@@ -43,7 +43,7 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
       color: $color-text;
     }
 
-    h2, h3, h4 {
+    h1, h2, h3, h4 {
       color: $color-accent;
     }
   }
@@ -159,7 +159,7 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
 
 /* +Footer */
   footer {
-    width: 100%; /* RECORDATORIO No se si es necesaria esta linea, definir si es 100 95 80 */
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,19 +173,19 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
   }
 
   .footer__cardsBelt {
-    width: 100%;
+    width: 90%;
     /* height: 20%; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    flex-wrap: wrap; /* Mejorar, tal vez sea necesario usar grids para q queden comodamente distribuidos en 2 lineas */
-    gap: 10px 7px;
+    flex-wrap: wrap;
+    gap: 10px 10px;
   }
 
   .cardsBelt__card--align {
-    width: 72px;
-    height: 46px;
+    width: calc(4/5 * 72px);
+    height: calc(4/5 * 46px);
 
     img {
       width: 70%;
@@ -193,7 +193,7 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
       position: relative;
       top: -88%;
       left: 14%;
-      transition: 600ms;
+      transition: 500ms;
     }
   }
 
@@ -206,19 +206,20 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
     /* ! Interesante q esto solo se dispare si se pasa sobre card--shape ya q card--align no tiene partes visibles ¿Porqué? */
     /* Me pregunto si al ser un area mayor la de card--align protegera de missfires de la animacion cuando el mouse se va de la zona de card--shape pero no de card--align */
     .cardsBelt__card--shape {
-      background: $color-footerBtn-hover;
       transform: translateY(12px) skew(30deg); /* Transform me arruina los bordes, ¿Recomendacion? */
+      background: $color-footerBtn-hover;
     }
   }
 
   .cardsBelt__card--shape {
-    width: 72px;
-    height: 46px;
+    width: calc(4/5 * 72px);
+    height: calc(4/5 * 46px);
     transform: skew(30deg);
     background-color: $color-accent;
-    border: 2px solid $color-btn-border;
     border-radius: 4px;
-    transition: 600ms;
+    // border: 2px solid ;
+    box-shadow: 0px 0px 0px 1.6px $color-btn-border; /* Usado para contrarestar lo borroso del borde luego de aplicar un transform */
+    transition: 500ms;
   }
 
   // .cardsBelt__card--shape:hover {
@@ -231,8 +232,8 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
 
   /* Pregunta, en los HTML no le asigne afooter__contact la clase class="cardsBelt__card--align" ya q pense q podria afectar negativamente en especial creia q la imagen iba a ser afectada 2 veces por los valores de width y height, y el posicionamiento, aunque si no estoy esquivocado solo tendrian q sobre escribir. ¿Q seria lo más correcto?, en este caso no hay propiedades q sean distintas (sobren o falten) de ambos grupos. Por ahora esto me parecio lo más limpio, tal vez tendria q crear una clase unica ya q este elemento es un poco distinto. mixin? */
   #footer__contact {
-    width: 88px;
-    height: 70px;
+    width: calc(4/5 * 88px);
+    height: calc(4/5 * 70px);
     z-index: 1;
     margin-right: 4px; /* Controla la superpocicion de la esquina */
 
@@ -242,7 +243,7 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
       position: relative;
       top: -118%;
       left: -16%;
-      transition: 600ms;
+      transition: 500ms;
     }
   }
 
@@ -252,36 +253,44 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
     }
 
     #footer__contact--shape {
-      background: $color-footerBtn-hover;
       transform: scaleY(0.8) skew(150deg) translateY(20%);
+      background: $color-footerBtn-hover;
     }
   }
 
   #footer__contact--shape {
-    width: 88px;
-    height: 70px;
+    width: calc(4/5 * 88px);
+    height: calc(4/5 * 70px);
     transform: skew(145deg);
-    transition: 600;
+    background-color: $color-accent;
+    border-radius: 4px;
+    // border: 2px solid ;
+    box-shadow: 0px 0px 0px 1.6px $color-btn-border;
+    transition: 500ms;
   }
 
   .madeBy {
-    width: 33px;
-    height: 33px;
+    width: 16px;
+    height: 16px;
     display: block;
-    transform: scaleY(5.01);/* Intentando crear forma de diamante y fallando horriblemente hay otras scales en el documento team.html por mas q lo voy a sacar despues */
-    transform: rotate(45deg);
+    transform: scaleY(2.11) rotate(45deg);
     background-color: $color-accent;
     color: $color-text;
     text-align: center;
     border: 1px solid $color-text;
     overflow:hidden;
     transition: 260ms;
-    line-height: 30px;
+    line-height: 22px;
     text-decoration: none;
+    font-size: 0.7rem;
+    writing-mode: sideways-lr;
   }
 
   .madeBy:hover { /* Sacar y limpiar esto luego */
-    width: 444px;
+    width: 48px;
+    height: 48px;
+    translate: 0px -48px;
+    box-shadow: 3px 3px 0px 2px $color-BG , 6px 6px 0px 4px $color-btn-border;
   }
 /* + */
 
@@ -349,16 +358,15 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
       margin: 0px;
     }
 
-    main.asideGrid {
+    .asideGrid {
       /* flex: none; */ /* ¿Es necesario? */
       display: grid; /* ¿Causa algun problema si coloco grid SOLO aquí? o sea no esta puesto en "Mobile" ya q no la usa, es una curiocidad. */
-      gap: 20px;
+      gap: 0px 10px;
       grid-template-areas:
-        "sec1 ."
-        "sec1 sec2"
+        "sec1 sec1 sec2"
       ;
-      /* align-items: center; */
-      /* justify-items: center; */
+      align-items: flex-start;
+      justify-content: stretch;
     }
 
     section.sec1 {

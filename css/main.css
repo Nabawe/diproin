@@ -32,7 +32,7 @@ body {
 body p {
   color: #222;
 }
-body h2, body h3, body h4 {
+body h1, body h2, body h3, body h4 {
   color: #F2FBFF;
 }
 
@@ -139,7 +139,6 @@ main section {
 /* +Footer */
 footer {
   width: 100%;
-  /* RECORDATORIO No se si es necesaria esta linea, definir si es 100 95 80 */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,20 +151,19 @@ footer p {
 }
 
 .footer__cardsBelt {
-  width: 100%;
+  width: 90%;
   /* height: 20%; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
-  /* Mejorar, tal vez sea necesario usar grids para q queden comodamente distribuidos en 2 lineas */
-  gap: 10px 7px;
+  gap: 10px 10px;
 }
 
 .cardsBelt__card--align {
-  width: 72px;
-  height: 46px;
+  width: calc(4/5 * 72px);
+  height: calc(4/5 * 46px);
 }
 .cardsBelt__card--align img {
   width: 70%;
@@ -173,7 +171,7 @@ footer p {
   position: relative;
   top: -88%;
   left: 14%;
-  transition: 600ms;
+  transition: 500ms;
 }
 
 .cardsBelt__card--align:hover {
@@ -184,25 +182,26 @@ footer p {
   transform: scale(0.8) translateY(60%);
 }
 .cardsBelt__card--align:hover .cardsBelt__card--shape {
-  background: rgba(147, 150, 158, 0.972);
   transform: translateY(12px) skew(30deg);
   /* Transform me arruina los bordes, ¿Recomendacion? */
+  background: rgba(147, 150, 158, 0.972);
 }
 
 .cardsBelt__card--shape {
-  width: 72px;
-  height: 46px;
+  width: calc(4/5 * 72px);
+  height: calc(4/5 * 46px);
   transform: skew(30deg);
   background-color: #F2FBFF;
-  border: 2px solid #444;
   border-radius: 4px;
-  transition: 600ms;
+  box-shadow: 0px 0px 0px 1.6px #444;
+  /* Usado para contrarestar lo borroso del borde luego de aplicar un transform */
+  transition: 500ms;
 }
 
 /* Pregunta, en los HTML no le asigne afooter__contact la clase class="cardsBelt__card--align" ya q pense q podria afectar negativamente en especial creia q la imagen iba a ser afectada 2 veces por los valores de width y height, y el posicionamiento, aunque si no estoy esquivocado solo tendrian q sobre escribir. ¿Q seria lo más correcto?, en este caso no hay propiedades q sean distintas (sobren o falten) de ambos grupos. Por ahora esto me parecio lo más limpio, tal vez tendria q crear una clase unica ya q este elemento es un poco distinto. mixin? */
 #footer__contact {
-  width: 88px;
-  height: 70px;
+  width: calc(4/5 * 88px);
+  height: calc(4/5 * 70px);
   z-index: 1;
   margin-right: 4px;
   /* Controla la superpocicion de la esquina */
@@ -213,44 +212,51 @@ footer p {
   position: relative;
   top: -118%;
   left: -16%;
-  transition: 600ms;
+  transition: 500ms;
 }
 
 #footer__contact:hover img {
   transform: scale(1.25) translateY(-14px);
 }
 #footer__contact:hover #footer__contact--shape {
-  background: rgba(147, 150, 158, 0.972);
   transform: scaleY(0.8) skew(150deg) translateY(20%);
+  background: rgba(147, 150, 158, 0.972);
 }
 
 #footer__contact--shape {
-  width: 88px;
-  height: 70px;
+  width: calc(4/5 * 88px);
+  height: calc(4/5 * 70px);
   transform: skew(145deg);
-  transition: 600;
+  background-color: #F2FBFF;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 1.6px #444;
+  transition: 500ms;
 }
 
 .madeBy {
-  width: 33px;
-  height: 33px;
+  width: 16px;
+  height: 16px;
   display: block;
-  transform: scaleY(5.01);
-  /* Intentando crear forma de diamante y fallando horriblemente hay otras scales en el documento team.html por mas q lo voy a sacar despues */
-  transform: rotate(45deg);
+  transform: scaleY(2.11) rotate(45deg);
   background-color: #F2FBFF;
   color: #222;
   text-align: center;
   border: 1px solid #222;
   overflow: hidden;
   transition: 260ms;
-  line-height: 30px;
+  line-height: 22px;
   text-decoration: none;
+  font-size: 0.7rem;
+  -ms-writing-mode: sideways-lr;
+      writing-mode: sideways-lr;
 }
 
 .madeBy:hover {
   /* Sacar y limpiar esto luego */
-  width: 444px;
+  width: 48px;
+  height: 48px;
+  translate: 0px -48px;
+  box-shadow: 3px 3px 0px 2px #6296BA, 6px 6px 0px 4px #444;
 }
 
 /* + */
@@ -303,15 +309,15 @@ footer p {
     margin: 0px;
   }
 
-  main.asideGrid {
+  .asideGrid {
     /* flex: none; */
     /* ¿Es necesario? */
     display: grid;
     /* ¿Causa algun problema si coloco grid SOLO aquí? o sea no esta puesto en "Mobile" ya q no la usa, es una curiocidad. */
-    gap: 20px;
-    grid-template-areas: "sec1 ." "sec1 sec2";
-    /* align-items: center; */
-    /* justify-items: center; */
+    gap: 0px 10px;
+    grid-template-areas: "sec1 sec1 sec2";
+    align-items: flex-start;
+    justify-content: stretch;
   }
 
   section.sec1 {
