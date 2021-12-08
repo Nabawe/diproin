@@ -244,7 +244,7 @@
 /* +Media Querries */
   /* A futuro pensar, 3 medidas de celulares, 2 de phablets, 4 de tablets, 2 de notebook 16:10 y 16:9, 4 de PC, 4 de TV, 2 cuadradas universales para todos los dispositivos q usen pantallas cuadradas. ¿Tiene algo de sentido lo q puse recien o solo estoy desperdiciando tiempo? ¿Hay algun sitio q haga analisis y me diga a q apuntar para X producto/tipo de pagina? */
   /* @media only screen and (min-width:600px) {
-    main.asideGrid {
+    main.main__align {
       grid-template-areas:
         "deals liveFeed"
         "news liveFeed"
@@ -279,7 +279,7 @@
       margin: 0px;
     }
 
-    main.asideGrid {
+    main.main__align {
       /* flex: none; */ /* ¿Es necesario? */
       display: grid;
       gap: 20px;

@@ -309,13 +309,13 @@ footer p {
     margin: 0px;
   }
 
-  .asideGrid {
+  .main__align {
     /* flex: none; */
     /* ¿Es necesario? */
     display: grid;
     /* ¿Causa algun problema si coloco grid SOLO aquí? o sea no esta puesto en "Mobile" ya q no la usa, es una curiocidad. */
     gap: 0px 10px;
-    grid-template-areas: "sec1 sec1 sec2";
+    grid-template-areas: "sec1 sec1 secAside1" "sec3 sec4 secAside2";
     align-items: flex-start;
     justify-content: stretch;
   }
@@ -326,6 +326,22 @@ footer p {
 
   section.sec2 {
     grid-area: sec2;
+  }
+
+  section.sec3 {
+    grid-area: sec3;
+  }
+
+  section.sec4 {
+    grid-area: sec4;
+  }
+
+  section.secAside1 {
+    grid-area: secAside1;
+  }
+
+  section.secAside2 {
+    grid-area: secAside2;
   }
 
   main section {
