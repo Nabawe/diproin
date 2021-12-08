@@ -47,3 +47,4 @@
         http://drive.google.com/uc?export=view&id=<REEMPLAZAR AQUI CON FILEID>
             Parece q este es el formato para perma links
     Falta solucion para el borde negro
++ Use twitter agregator to make a grid.

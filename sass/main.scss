@@ -316,6 +316,7 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
     margin: -32px -3px -33px; /* Cutoff Magic!!! */
   }
 
+  /* https://stackoverflow.com/questions/63653100/remove-google-border-from-embedded-google-sheet */
   .promo__card--cutoff {
     overflow: hidden; /* Makes cutoff work */
     // border: 2px solid black; /* Just for aesthetics, can be removed */
