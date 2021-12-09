@@ -1,50 +1,71 @@
-+ Agregar en nosotros.html o index.html "Firma" o Logo mio q redireccione a mi porfolio, git, contacto y demas.
++ Improve madeBy, instead of GitHub link to my porfolio, add contact info and repos.
+
 + Combinar nosotros.html con team.html.
-+ Aside para testimonios y Twitter feed usando grid.
-+ Flex Cards para el contenido en Index, Services.
-+ Contenido usando markdown para q lo puedan agregar de forma dinamica. Si es mucho pedir usar Google Docs q pasen por una CSS.
+
 + Locales, por si por ejemplo Brazilero o alguien q prefiere Ingles usa la Web.
-+ Mover logo dentro de la Nav y q sea el link a Index.
+    ! Preguntar sobre localization
+
 + Mover contact a la izquierda del footer, leyenda "Contacto y mapa" o "Expandir Contacto".
+
 ? Modificar el style del mapa desde CSS. En especial width y height para q sean unidades relativas, con forma rectangular en pantallas landscape y cuadrada en portrait, revisar q no se superponga con otros elementos, ¿sera q necesita unidades fijas antes de cargar?.
-? Las cosas q hemos dado de media querry como reacionaran a el cambio de landscape y portrait en los celulares, tablets, ultrabooks, etc.
-? Tendria que agregar una layout para SmartWatches?
-+ Revisar casos donde seria inteligente usar min y max width y height. Como propiedad y no como Media Query. Para por ejemplo determinar el verdadero tamaño minimo con el q se desea mostrar el sitio.
+
 ? Meditar si hacer paleta de colores de alto contraste para celulares, e-ink, discapacidad.
     OLD : [Algo importante para conciderar seria usar colores con mas contraste para pantallas de celular o tablets asi ayuda a leer con luz de sol y etc]
+
 + Medidas Standard Más Comunes 320px 480px 600px 768px 1024px 1200px
-    es 320 o 360 la minima a conciderar? 320 parece ser la medida de un iPhone viejo.
-    Algunas personas hablan de empesar en 576 y hasta hay gente q pone 768.
-    Averiguar bien para definirlo a futuro.
+    - Es 320 o 360 la minima a conciderar? 320 parece ser la medida de un iPhone viejo.
+    - Algunas personas hablan de empesar en 576 y hasta hay gente q pone 768.
+    - Averiguar bien para definirlo a futuro.
+    ? Layout para SmartWatches, ¿Reverse Responsive? hahaha
+
 + Decidir si poner un boton flotante back to top o si la nav queda siempre visible
-    Creo q seria mejor q la nav se vuelva una "mini nav" con los elementos bien chatos y q quede siempre visible, ya q con las modificaciones anteriores queda bien simplificada, pero de hacer esto por ahi sea mejor q quede contact arriba.
-    OLD : [Que sea corrediza en la ver de celular y no un menu, dejando el logo estatico para volver]
+    !!! Creo q seria mejor q la nav se vuelva una "mini nav" con los elementos bien chatos y q quede siempre visible, ya q con las modificaciones anteriores queda bien simplificada, pero de hacer esto por ahi sea mejor q quede contact arriba.
+    - OLD : [Que sea corrediza en la ver de celular y no un menu, dejando el logo estatico para volver]
+
 + Optimizar Fonts, ver si aplicar Noto o no, ver otras opciones.
-+ Eliminar todos las br.
+
 + Extraer los iconos de las redes sociales y etc y crear una carpeta ico aun si son "fuentes".
+
 + SVGs:
     - Modificar SVG usando svg tag.
     - Alguna propierdad para q la transformacion del elemento anidado no sea aplicada.
     - Unnest img y luego alinear.
     - fab icon.
+
 + Colocar buen h1 y h2 en todas las paginas luego de aprender un poco mas de SEO.
-+ Colocar mini texto debajo de logo q diga "· Inicio ·".
+
 ! Preguntar sobre licencias y legal
+
 ! Archivos binarios y optimizacion
-! Preguntar sobre localization
+
 + Pasar de favicon.ico a los 3 o 4 tamaños en png
-    https://diblet.com/blog/como-incluir-correctamente-un-favicon/
-    https://realfavicongenerator.net/
+    - https://diblet.com/blog/como-incluir-correctamente-un-favicon/
+    - https://realfavicongenerator.net/
+    - Agregar las tags necesarias para Android, iPhone, Apple, etc
+
 + Optimize Site Map or make manually.
+
 + DIPROIN_logo.svg la fuente en realidad creo q tendria q ser alguna de "consola" tambien fue bastante hecho a mano habria q rehacerlo de 0 de forma simetrica perfecta.
+
 + Footer
     <!-- Mail, Phone y otros q tengan 2 direcciones q esten divididos en 2 zonas clickeables -->
     <!-- Mejorar los colores buscando un intermedio/funcion math entre los colores officiales y la paleta utilizada-->
+
 + SEO agregar a las keywords productos reprecentativos.
-+ Preguntar como sacar las blurs de los bordes.
+
 + promo__card--iframe si uso imagenes "incell" no se muestran y si las pongo "over cell" me crea un borde fino negro. Soluciones?
-    Subir a drive y luego modificar el formato de la dirección y usar
+    - Subir a drive y luego modificar el formato de la dirección y usar
         http://drive.google.com/uc?export=view&id=<REEMPLAZAR AQUI CON FILEID>
             Parece q este es el formato para perma links
-    Falta solucion para el borde negro
-+ Use twitter agregator to make a grid.
+    ! Falta solucion para el borde negro
+    ? Preguntar si conocen mejor solución.
+
++ Use Twitter agregator to make a Twitter Grid, para distribuir el espacio mejor.
+
++ Keybinds
+    !!! editor.emmet.action.wrapWithAbbreviation
+    !!! Emmet: Go to Matching Pair (For closing tags, ", [, etc)
+    !!! re-Sort alt d ; ctrl d ; shift some quick simple bind for expand and shrink selection
+        Expand Selection                   Shift Alt Right
+        Shrink Selection                   Shift Alt Left
+    - Quick Fix                   Ctrl .
