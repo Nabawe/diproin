@@ -1,30 +1,43 @@
 + Improve madeBy, instead of GitHub link to my porfolio, add contact info and repos.
 
+
 + Combinar nosotros.html con team.html.
+
 
 + Locales, por si por ejemplo Brazilero o alguien q prefiere Ingles usa la Web.
     ! Preguntar sobre localization
 
+
 + Mover contact a la izquierda del footer, leyenda "Contacto y mapa" o "Expandir Contacto".
+
 
 ? Modificar el style del mapa desde CSS. En especial width y height para q sean unidades relativas, con forma rectangular en pantallas landscape y cuadrada en portrait, revisar q no se superponga con otros elementos, ¿sera q necesita unidades fijas antes de cargar?.
 
+
 ? Meditar si hacer paleta de colores de alto contraste para celulares, e-ink, discapacidad.
     OLD : [Algo importante para conciderar seria usar colores con mas contraste para pantallas de celular o tablets asi ayuda a leer con luz de sol y etc]
+
 
 + Medidas Standard Más Comunes 320px 480px 600px 768px 1024px 1200px
     - Es 320 o 360 la minima a conciderar? 320 parece ser la medida de un iPhone viejo.
     - Algunas personas hablan de empesar en 576 y hasta hay gente q pone 768.
     - Averiguar bien para definirlo a futuro.
-    ? Layout para SmartWatches, ¿Reverse Responsive? hahaha
+    ? Layout para SmartWatches, ¿Reverse Responsive? hahaha.
+    - 720p el profesor parece usar Google Chrome en una notebook 720.
+
 
 + Decidir si poner un boton flotante back to top o si la nav queda siempre visible
     !!! Creo q seria mejor q la nav se vuelva una "mini nav" con los elementos bien chatos y q quede siempre visible, ya q con las modificaciones anteriores queda bien simplificada, pero de hacer esto por ahi sea mejor q quede contact arriba.
+        · El efecto para la nav bar es el del encendido de un fósforo, una llama pero solo para vías de luz, o sea una distorcion o blur con bordes bien brillantes haciendo un poquito de zoom en las juntas de los azulejos.
     - OLD : [Que sea corrediza en la ver de celular y no un menu, dejando el logo estatico para volver]
+
+
 
 + Optimizar Fonts, ver si aplicar Noto o no, ver otras opciones.
 
+
 + Extraer los iconos de las redes sociales y etc y crear una carpeta ico aun si son "fuentes".
+
 
 + SVGs:
     - Modificar SVG usando svg tag.
@@ -32,26 +45,35 @@
     - Unnest img y luego alinear.
     - fab icon.
 
+
 + Colocar buen h1 y h2 en todas las paginas luego de aprender un poco mas de SEO.
+
 
 ! Preguntar sobre licencias y legal
 
+
 ! Archivos binarios y optimizacion
+
 
 + Pasar de favicon.ico a los 3 o 4 tamaños en png
     - https://diblet.com/blog/como-incluir-correctamente-un-favicon/
     - https://realfavicongenerator.net/
     - Agregar las tags necesarias para Android, iPhone, Apple, etc
 
-+ Optimize Site Map or make manually.
+
++ Optimize Site Map (XML) or make manually. Add growing (left to right width transition) to the HTML Site Map's links.
+
 
 + DIPROIN_logo.svg la fuente en realidad creo q tendria q ser alguna de "consola" tambien fue bastante hecho a mano habria q rehacerlo de 0 de forma simetrica perfecta.
+
 
 + Footer
     <!-- Mail, Phone y otros q tengan 2 direcciones q esten divididos en 2 zonas clickeables -->
     <!-- Mejorar los colores buscando un intermedio/funcion math entre los colores officiales y la paleta utilizada-->
 
+
 + SEO agregar a las keywords productos reprecentativos.
+
 
 + promo__card--iframe si uso imagenes "incell" no se muestran y si las pongo "over cell" me crea un borde fino negro. Soluciones?
     - Subir a drive y luego modificar el formato de la dirección y usar
@@ -60,7 +82,42 @@
     ! Falta solucion para el borde negro
     ? Preguntar si conocen mejor solución.
 
+
 + Use Twitter agregator to make a Twitter Grid, para distribuir el espacio mejor.
+
+
++ Definir los estilos de los links en forma general, visited, etc para cuando no estan aplicados a un caso especifico.
+
+
++ Selected Text
+    - CSS properties can be applied to ::selection: color, background, cursor, and outline.
+
+
++ Zoom Adaptability : q no se rompa la pagina por hacer zoom in or out.
+
+
++ Borrar commits de una fecha para atras.
+
+
++ Dark/Light Modes ?
+
+
+
+
+
+
+
+
+
+
+
+
++ Git : Turbo Charge
+    Como usarlo para poder solo afectar partes de un archivo, "taggear" o darle algun tipo de label a los tipos de cambios ejemplo agregar o sacar comentarios de todos los archivos, el trabajar en una f determinada, o sea q Git no solo mire las posicion donde esta la diferencia sino de una forma q casi "entienda" el contenido.
+
+
++ Check Microsoft Smart Art
+
 
 + Keybinds
     !!! editor.emmet.action.wrapWithAbbreviation
