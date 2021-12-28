@@ -25,11 +25,18 @@ body {
   /* ESTO ES UN RECORDATORIO YA Q VEO PROBLEMAS POR ESTAS 2 lineas Aquí primero no estoy completamente seguro si deberia usar flexbox por defecto para Mobile First y segundo no estoy seguro si usar items o content para body?  */
   align-items: center;
 }
-body p {
-  color: #222;
-}
 body h1, body h2, body h3, body h4 {
   color: #F2FBFF;
+}
+body p {
+  color: #F2FBFF;
+}
+body ul {
+  color: #F2FBFF;
+  list-style-position: inside;
+}
+body ul li {
+  margin-top: 0.5rem;
 }
 
 /* + */
@@ -116,7 +123,7 @@ main {
 }
 main section {
   width: 100%;
-  height: auto;
+  height: 100%;
   background-color: #0397D1;
   box-shadow: 3px 3px 2px 4px rgba(34, 34, 34, 0.6);
   /* es #222 con 0.6 de alpha */
@@ -229,9 +236,9 @@ footer p {
   display: block;
   transform: scaleY(2.11) rotate(45deg);
   background-color: #F2FBFF;
-  color: #222;
+  color: #F2FBFF;
   text-align: center;
-  border: 1px solid #222;
+  border: 1px solid #F2FBFF;
   overflow: hidden;
   transition: 260ms;
   line-height: 22px;
@@ -285,14 +292,30 @@ footer p {
 .e404--logo {
   font-size: 20rem;
   color: #EEE8A9;
-  text-shadow: 2px 2px 2px #222;
+  text-shadow: 2px 2px 2px #F2FBFF;
   font-family: "Monoton", cursive;
 }
 
 /* + */
-/* +Products */
+/* +p-nosotros */
+/* + */
+/* +p-productos */
+#p-productos .products-table {
+  width: 80%;
+  height: 40vh;
+}
+
 /* + */
 /* +Services */
+/* + */
+/* +p-mainGrid */
+#p-mainGrid section > h2 {
+  margin-bottom: 1rem;
+}
+#p-mainGrid section p {
+  margin-top: 1rem;
+}
+
 /* + */
 /* +Media Querries */
 /* RECORDATORIO A futuro pensar, 3 medidas de celulares, 2 de phablets, 4 de tablets, 2 de notebook 16:10 y 16:9, 4 de PC, 4 de TV, 2 cuadradas universales para todos los dispositivos q usen pantallas cuadradas. ¿Tiene algo de sentido lo q puse recien o solo estoy desperdiciando tiempo? ¿Hay algun sitio q haga analisis y me diga a q apuntar para X producto/tipo de pagina? */
@@ -322,13 +345,18 @@ footer p {
     margin: 0px;
   }
 
+  main section {
+    margin: 0px 0px;
+  }
+
   #p-mainGrid {
     /* flex: none; */
     /* ¿Es necesario? */
     display: grid;
     /* ¿Causa algun problema si coloco grid SOLO aquí? o sea no esta puesto en "Mobile" ya q no la usa, es una curiocidad. */
-    gap: 0px 10px;
-    grid-template-areas: "sec1 sec1 secAside1" "sec3 sec4 secAside2";
+    flex-flow: row wrap;
+    gap: 10px 10px;
+    grid-template-areas: "sec1 sec1 secAside1" "sec2 sec2 secAside1" "sec3 sec3 secAside1" "sec4 sec4 secAside1";
     align-items: flex-start;
     justify-content: stretch;
   }
@@ -350,9 +378,36 @@ footer p {
   #p-mainGrid .secAside2 {
     grid-area: secAside2;
   }
+  #p-mainGrid .card {
+    border: solid 1px #444;
+    background-color: aqua;
+  }
 
-  main section {
-    margin: 0px 0px;
+  #p-staffGrid {
+    display: grid;
+    flex-flow: row wrap;
+    gap: 10px 10px;
+    grid-template-areas: "staff1 staff2 staff3" "staff4 staff5 staff6";
+    align-items: flex-start;
+    justify-content: stretch;
+  }
+  #p-staffGrid .staff1 {
+    grid-area: staff1;
+  }
+  #p-staffGrid .staff2 {
+    grid-area: staff2;
+  }
+  #p-staffGrid .staff3 {
+    grid-area: staff3;
+  }
+  #p-staffGrid .staff4 {
+    grid-area: staff4;
+  }
+  #p-staffGrid .staff5 {
+    grid-area: staff5;
+  }
+  #p-staffGrid .staff6 {
+    grid-area: staff6;
   }
 }
 /* + */
@@ -365,4 +420,14 @@ footer p {
   border: 1px solid aqua;
   gap: 0;
   margin: 0;
+}
+
+.g-WIP--hidden {
+  display: none;
+  background-color: #fff;
+  color: #222;
+  width: 80%;
+  height: 100px;
+  text-align: center;
+  border: 1px solid #222;
 }

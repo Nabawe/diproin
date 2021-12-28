@@ -12,9 +12,12 @@ $color--logoWhite         : #fff;
 $color--BG                : #6296BA;
 $color--accent            : #F2FBFF;
 $color--highlight         : #EEE8A9;
-$color--text              : #222;
+// $color--text              : #222;
+$color--text              : #F2FBFF;
 $color--btn-border        : #444;
 $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
+
+// Make size vars
 
 * {
   margin: 0px;
@@ -36,12 +39,20 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
     justify-items: center;/* ESTO ES UN RECORDATORIO YA Q VEO PROBLEMAS POR ESTAS 2 lineas Aquí primero no estoy completamente seguro si deberia usar flexbox por defecto para Mobile First y segundo no estoy seguro si usar items o content para body?  */
     align-items: center;
 
+    h1, h2, h3, h4 {
+      color: $color--accent;
+    }
+
     p {
       color: $color--text;
     }
 
-    h1, h2, h3, h4 {
-      color: $color--accent;
+    ul {
+      color: $color--text;
+      list-style-position: inside;
+      li {
+        margin-top: 0.5rem;
+      }
     }
   }
 /* + */
@@ -145,7 +156,7 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
 
     section {
       width: 100%;
-      height: auto;
+      height: 100%;
       background-color: $color--main;
       box-shadow: 3px 3px 2px 4px rgba(34, 34, 34, 0.600); /* es #222 con 0.6 de alpha */
       border-radius: 4px;
@@ -347,13 +358,36 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
 /* + */
 
 
-/* +Products */
+/* +p-nosotros */
+/* + */
 
+
+/* +p-productos */
+  #p-productos {
+    .products-table {
+      width: 80%;
+      height: 40vh;
+    }
+  }
 /* + */
 
 
 /* +Services */
 
+/* + */
+
+
+/* +p-mainGrid */
+  #p-mainGrid {
+    section {
+      & > h2 {
+        margin-bottom: 1rem;
+      }
+      & p {
+        margin-top: 1rem;
+      }
+    }
+  }
 /* + */
 
 
@@ -392,21 +426,26 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
       }
     }
 
+    main section {
+      margin: 0px 0px;
+    }
+
     #p-mainGrid {
       /* flex: none; */ /* ¿Es necesario? */
       display: grid; /* ¿Causa algun problema si coloco grid SOLO aquí? o sea no esta puesto en "Mobile" ya q no la usa, es una curiocidad. */
-      gap: 0px 10px;
+      flex-flow: row wrap;
+      gap: 10px 10px;
       grid-template-areas:
         "sec1 sec1 secAside1"
-        "sec3 sec4 secAside2"
+        "sec2 sec2 secAside1"
+        "sec3 sec3 secAside1"
+        "sec4 sec4 secAside1"
       ;
       align-items: flex-start;
       justify-content: stretch;
-
       .sec1 {
         grid-area: sec1;
       }
-
       .sec2 {
         grid-area: sec2;
       }
@@ -416,18 +455,49 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
       .sec4 {
         grid-area: sec4;
       }
-
       .secAside1 {
         grid-area: secAside1;
       }
-
       .secAside2 {
         grid-area: secAside2;
       }
     }
 
-    main section {
-      margin: 0px 0px;
+    #p-staffGrid {
+      display: grid;
+      flex-flow: row wrap;
+      gap: 10px 10px;
+      grid-template-areas:
+        "staff1 staff2 staff3"
+        "staff4 staff5 staff6"
+      ;
+      align-items: flex-start;
+      justify-content: stretch;
+      .staff1 {
+        grid-area: staff1;
+      }
+      .staff2 {
+        grid-area: staff2;
+      }
+      .staff3 {
+        grid-area: staff3;
+      }
+      .staff4 {
+        grid-area: staff4;
+      }
+      .staff5 {
+        grid-area: staff5;
+      }
+      .staff6 {
+        grid-area: staff6;
+      }
+
+      .card {
+        width: 300px;
+        height: 300px;
+        border: 1px solid $color--btn-border;
+        background-color: aqua;
+      }
     }
   }
 /* + */
@@ -441,4 +511,14 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
   border: 1px solid aqua;
   gap: 0;
   margin: 0;
+}
+
+.g-WIP--hidden {
+  display: none;
+  background-color: #fff;
+  color: #222;
+  width: 80%;
+  height: 100px;
+  text-align: center;
+  border: 1px solid #222;
 }

@@ -7,8 +7,10 @@
 7 - Minibar
 8 - Add Site Map
 9 - Improve 404
+10 - Improve Testimonials
+    Seria mejor q sea un feed a una seccion de una red social asi se actualizan.
 
-
+50 - g-WIP--hidden
 
 + Improve madeBy, instead of GitHub link to my porfolio, add contact info and repos.
 
@@ -129,6 +131,9 @@
         Aislarlas con un wrapper o algo tipo div.class = "g-external" q no hace nada mas q colocar entre divs cosas externas.
             o g-external-1 ; g-external-2 ; g-external-twitter o sea agregar un ID.
 
+
++ Check if "adapt queries content" philosophy works, ie nest querries inside selectors to try and make content universal.
+    "GPS advises that you create media queries around the content rather than the device / screen size."
 
 
 
