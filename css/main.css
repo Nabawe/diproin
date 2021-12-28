@@ -6,10 +6,6 @@
   font-family: 'Hina Mincho', serif; Styled Font
 */
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
-/* Error 404 logo */
-/* Para no olvidarme q existe */
-/* :root {
-} */
 * {
   margin: 0px;
   padding: 0px;
@@ -17,7 +13,7 @@
 }
 
 /* +Defaults */
-html {
+:root {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
@@ -41,21 +37,19 @@ body h1, body h2, body h3, body h4 {
 header {
   width: 95%;
 }
-header nav {
+
+/* + */
+/* +p-nav */
+#p-nav {
   display: grid;
   gap: 0px 13px;
-  grid-template-areas: "nav__logo .    .    ." "nav__logo nav1 nav2 ." "nav__logo .    .    ." "nav__logo nav3 nav4 ." "nav__logo .    .    .";
+  grid-template-areas: "logo .    .    ." "logo g-nav--1 g-nav--2 ." "logo .    .    ." "logo g-nav--3 g-nav--4 ." "logo .    .    .";
   align-items: center;
 }
-header nav a:hover {
+#p-nav a:hover {
   color: #EEE8A9;
 }
-
-.nav__logo--svg {
-  height: 7rem;
-}
-
-.nav__Text {
+#p-nav .btn {
   min-width: 110px;
   font-size: 0.9rem;
   color: #F2FBFF;
@@ -66,44 +60,40 @@ header nav a:hover {
   padding: 3% 0px;
   padding-bottom: 4%;
 }
-
-.nav__logo--svg--miniText {
+#p-nav .miniText {
   font-size: 0.9rem;
   color: #F2FBFF;
   text-align: center;
   position: relative;
   bottom: 1.5rem;
 }
-
-#nav__logo {
+#p-nav .logo {
   border: none;
   background-color: unset;
-  grid-area: nav__logo;
+  grid-area: logo;
   padding: 0px;
   margin-top: 4%;
   justify-self: left;
   text-decoration: none;
   border-radius: 10px;
 }
-
-#nav__logo:hover .nav__logo--svg--miniText {
+#p-nav .logo .svg {
+  height: 7rem;
+}
+#p-nav .logo:hover .miniText {
   color: #EEE8A9;
 }
-
-#nav1 {
-  grid-area: nav1;
+#p-nav #g-nav--1 {
+  grid-area: g-nav--1;
 }
-
-#nav2 {
-  grid-area: nav2;
+#p-nav #g-nav--2 {
+  grid-area: g-nav--2;
 }
-
-#nav3 {
-  grid-area: nav3;
+#p-nav #g-nav--3 {
+  grid-area: g-nav--3;
 }
-
-#nav4 {
-  grid-area: nav4;
+#p-nav #g-nav--4 {
+  grid-area: g-nav--4;
 }
 
 /* + */
@@ -162,8 +152,8 @@ footer p {
 }
 
 .cardsBelt__card--align {
-  width: calc(4/5 * 72px);
-  height: calc(4/5 * 46px);
+  width: 57.6px;
+  height: 36.8px;
 }
 .cardsBelt__card--align img {
   width: 70%;
@@ -188,8 +178,8 @@ footer p {
 }
 
 .cardsBelt__card--shape {
-  width: calc(4/5 * 72px);
-  height: calc(4/5 * 46px);
+  width: 57.6px;
+  height: 36.8px;
   transform: skew(30deg);
   background-color: #F2FBFF;
   border-radius: 4px;
@@ -200,8 +190,8 @@ footer p {
 
 /* Pregunta, en los HTML no le asigne afooter__contact la clase class="cardsBelt__card--align" ya q pense q podria afectar negativamente en especial creia q la imagen iba a ser afectada 2 veces por los valores de width y height, y el posicionamiento, aunque si no estoy esquivocado solo tendrian q sobre escribir. ¿Q seria lo más correcto?, en este caso no hay propiedades q sean distintas (sobren o falten) de ambos grupos. Por ahora esto me parecio lo más limpio, tal vez tendria q crear una clase unica ya q este elemento es un poco distinto. mixin? */
 #footer__contact {
-  width: calc(4/5 * 88px);
-  height: calc(4/5 * 70px);
+  width: 70.4px;
+  height: 56px;
   z-index: 1;
   margin-right: 4px;
   /* Controla la superpocicion de la esquina */
@@ -224,8 +214,8 @@ footer p {
 }
 
 #footer__contact--shape {
-  width: calc(4/5 * 88px);
-  height: calc(4/5 * 70px);
+  width: 70.4px;
+  height: 56px;
   transform: skew(145deg);
   background-color: #F2FBFF;
   border-radius: 4px;
@@ -261,31 +251,31 @@ footer p {
 
 /* + */
 /* +Index */
-#index-news {
+#p-index #news {
   max-width: 1200px;
 }
 
-.promo__container {
+/* + */
+/* +p-googleDocsPromoDiv */
+#p-googleDocsPromoDiv {
   display: flex;
   flex-flow: row wrap;
   max-width: 1300px;
-  /* Colocar var y cal de promo__card--iframe width * 4 + margen o padding + gap */
+  /* Colocar var y cal de card--iframe width * 4 + margen o padding + gap */
   align-items: flex-start;
   justify-content: stretch;
   gap: 10px 10px;
+  /* https://stackoverflow.com/questions/63653100/remove-google-border-from-embedded-google-sheet */
 }
-
-.promo__card--iframe {
+#p-googleDocsPromoDiv .card--iframe {
   width: 300px;
   height: 380px;
   margin: -32px -3px -33px;
-  /* Cutoff Magic!!! */
+  /* card--cutoff Magic!!! */
 }
-
-/* https://stackoverflow.com/questions/63653100/remove-google-border-from-embedded-google-sheet */
-.promo__card--cutoff {
+#p-googleDocsPromoDiv .card--cutoff {
   overflow: hidden;
-  /* Makes cutoff work */
+  /* Makes card--cutoff work */
   display: inline-block;
   /* Fit div to contents */
 }
@@ -310,31 +300,29 @@ footer p {
   header {
     width: 90%;
   }
-  header nav {
-    gap: 0px 40px;
-    grid-template-areas: "nav__logo nav1 nav2 nav3 nav4" "nav__logo .    .    .    .";
-  }
 
-  .nav__logo--svg {
+  #p-nav {
+    gap: 0px 40px;
+    grid-template-areas: "logo g-nav--1 g-nav--2 g-nav--3 g-nav--4" "logo .    .    .    .";
+  }
+  #p-nav .svg {
     height: 10rem;
   }
-
-  .nav__Text {
+  #p-nav .btn {
     min-width: 256px;
     font-size: 1.5rem;
     position: relative;
     top: 5px;
   }
-
-  #nav__logo {
+  #p-nav .logo {
     border: none;
     background-color: unset;
-    grid-area: nav__logo;
+    grid-area: logo;
     padding: 0px;
     margin: 0px;
   }
 
-  .main__align {
+  #p-mainGrid {
     /* flex: none; */
     /* ¿Es necesario? */
     display: grid;
@@ -344,28 +332,22 @@ footer p {
     align-items: flex-start;
     justify-content: stretch;
   }
-
-  section.sec1 {
+  #p-mainGrid .sec1 {
     grid-area: sec1;
   }
-
-  section.sec2 {
+  #p-mainGrid .sec2 {
     grid-area: sec2;
   }
-
-  section.sec3 {
+  #p-mainGrid .sec3 {
     grid-area: sec3;
   }
-
-  section.sec4 {
+  #p-mainGrid .sec4 {
     grid-area: sec4;
   }
-
-  section.secAside1 {
+  #p-mainGrid .secAside1 {
     grid-area: secAside1;
   }
-
-  section.secAside2 {
+  #p-mainGrid .secAside2 {
     grid-area: secAside2;
   }
 
@@ -383,4 +365,4 @@ footer p {
   border: 1px solid aqua;
   gap: 0;
   margin: 0;
-}/*# sourceMappingURL=main.css.map */
+}

@@ -5,20 +5,16 @@
   font-family: 'Noto Sans', sans-serif; The "Almost All" Languages Font
   font-family: 'Hina Mincho', serif; Styled Font
 */
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');/* Error 404 logo */
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
-$color-main: #0397D1;
-$color-logoWhite: #fff;
-$color-BG: #6296BA;
-$color-accent: #F2FBFF;
-$color-highlight: #EEE8A9;
-$color-text: #222;
-$color-btn-border: #444;
-$color-footerBtn-hover: rgba(147, 150, 158, 0.972);
-
-/* Para no olvidarme q existe */
-/* :root {
-} */
+$color--main              : #0397D1;
+$color--logoWhite         : #fff;
+$color--BG                : #6296BA;
+$color--accent            : #F2FBFF;
+$color--highlight         : #EEE8A9;
+$color--text              : #222;
+$color--btn-border        : #444;
+$color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
 
 * {
   margin: 0px;
@@ -28,105 +24,108 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
 
 
 /* +Defaults */
-  html {
+  // :root selects the html element in HTML but selects the proper root element for other XML things (like SVGs), since CSS was made to style more than the web. :root has a higher specificity vs <html> .
+  :root {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   }
 
   body {
-    background-color: $color-BG;
+    background-color: $color--BG;
     display: flex;
     flex-direction: column;
     justify-items: center;/* ESTO ES UN RECORDATORIO YA Q VEO PROBLEMAS POR ESTAS 2 lineas Aquí primero no estoy completamente seguro si deberia usar flexbox por defecto para Mobile First y segundo no estoy seguro si usar items o content para body?  */
     align-items: center;
 
     p {
-      color: $color-text;
+      color: $color--text;
     }
 
     h1, h2, h3, h4 {
-      color: $color-accent;
+      color: $color--accent;
     }
   }
 /* + */
 
-
 /* +Header */
   header {
     width: 95%;
+  }
+/* + */
 
-    nav {
-      display: grid;
-      gap: 0px 13px;
-      grid-template-areas:
-        "nav__logo .    .    ."
-        "nav__logo nav1 nav2 ."
-        "nav__logo .    .    ."
-        "nav__logo nav3 nav4 ."
-        "nav__logo .    .    ."
-      ;
-      align-items: center;
 
-      a:hover {
-        color: $color-highlight;
+/* +p-nav */
+  #p-nav {
+    display: grid;
+    gap: 0px 13px;
+    grid-template-areas:
+      "logo .    .    ."
+      "logo g-nav--1 g-nav--2 ."
+      "logo .    .    ."
+      "logo g-nav--3 g-nav--4 ."
+      "logo .    .    ."
+    ;
+    align-items: center;
+
+    a:hover {
+      color: $color--highlight;
+    }
+
+    .btn {
+      min-width: 110px;
+      // max-width: 144px;
+      // width: 5rem;
+      font-size: 0.9rem;
+      color: $color--accent;
+      text-decoration: none;
+      background-color: #0397d1;
+      border-radius: 10px;
+      text-align: center;
+      padding: 3% 0px;
+      padding-bottom: 4%;
+    }
+
+    .miniText {
+      font-size: 0.9rem;
+      color: $color--accent;
+      text-align: center;
+      position: relative;
+      bottom: 1.5rem;
+    }
+
+    .logo {
+      border: none;
+      background-color: unset;
+      grid-area: logo;
+      padding: 0px;
+      margin-top: 4%;
+      justify-self: left;
+      text-decoration: none;
+      border-radius: 10px;
+
+      .svg {
+        height: 7rem;
       }
     }
-  }
 
-  .nav__logo--svg {
-    height: 7rem;
-  }
+    .logo:hover .miniText {
+      color: $color--highlight;
+    }
 
-  .nav__Text {
-    min-width: 110px;
-    // max-width: 144px;
-    // width: 5rem;
-    font-size: 0.9rem;
-    color: $color-accent;
-    text-decoration: none;
-    background-color: #0397d1;
-    border-radius: 10px;
-    text-align: center;
-    padding: 3% 0px;
-    padding-bottom: 4%;
-  }
+    #g-nav--1 {
+      grid-area: g-nav--1;
+    }
 
-  .nav__logo--svg--miniText {
-    font-size: 0.9rem;
-    color: $color-accent;
-    text-align: center;
-    position: relative;
-    bottom: 1.5rem;
-  }
+    #g-nav--2 {
+      grid-area: g-nav--2;
+    }
 
-  #nav__logo {
-    border: none;
-    background-color: unset;
-    grid-area: nav__logo;
-    padding: 0px;
-    margin-top: 4%;
-    justify-self: left;
-    text-decoration: none;
-    border-radius: 10px;
-  }
+    #g-nav--3 {
+      grid-area: g-nav--3;
+    }
 
-  #nav__logo:hover .nav__logo--svg--miniText {
-    color: $color-highlight;
-  }
-
-  #nav1 {
-    grid-area: nav1;
-  }
-
-  #nav2 {
-    grid-area: nav2;
-  }
-
-  #nav3 {
-    grid-area: nav3;
-  }
-
-  #nav4 {
-    grid-area: nav4;
+    #g-nav--4 {
+      grid-area: g-nav--4;
+    }
   }
 /* + */
 
@@ -147,7 +146,7 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
     section {
       width: 100%;
       height: auto;
-      background-color: $color-main;
+      background-color: $color--main;
       box-shadow: 3px 3px 2px 4px rgba(34, 34, 34, 0.600); /* es #222 con 0.6 de alpha */
       border-radius: 4px;
       padding: 5px;
@@ -167,7 +166,7 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
     gap: 30px 0px;
 
     p {
-      color: $color-accent;
+      color: $color--accent;
       text-align: center;
     }
   }
@@ -184,8 +183,10 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
   }
 
   .cardsBelt__card--align {
-    width: calc(4/5 * 72px);
-    height: calc(4/5 * 46px);
+    $temp--A : 4/5 * 72px;
+    $temp--B : 4/5 * 46px;
+    width: $temp--A;
+    height: $temp--B;
 
     img {
       width: 70%;
@@ -207,33 +208,36 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
     /* Me pregunto si al ser un area mayor la de card--align protegera de missfires de la animacion cuando el mouse se va de la zona de card--shape pero no de card--align */
     .cardsBelt__card--shape {
       transform: translateY(12px) skew(30deg); /* Transform me arruina los bordes, ¿Recomendacion? */
-      background: $color-footerBtn-hover;
+      background: $color--footerBtn-hover;
     }
   }
-
   .cardsBelt__card--shape {
-    width: calc(4/5 * 72px);
-    height: calc(4/5 * 46px);
+    $temp--A : 4/5 * 72px;
+    $temp--B : 4/5 * 46px;
+    width: $temp--A;
+    height: $temp--B;
     transform: skew(30deg);
-    background-color: $color-accent;
+    background-color: $color--accent;
     border-radius: 4px;
     // border: 2px solid ;
-    box-shadow: 0px 0px 0px 1.6px $color-btn-border; /* Usado para contrarestar lo borroso del borde luego de aplicar un transform */
+    box-shadow: 0px 0px 0px 1.6px $color--btn-border; /* Usado para contrarestar lo borroso del borde luego de aplicar un transform */
     transition: 500ms;
   }
 
   // .cardsBelt__card--shape:hover {
-  //   background-color: $color-highlight; usar degrade radial de gris una vez resuelto
+  //   background-color: $color--highlight; usar degrade radial de gris una vez resuelto
   // }
 
   // img:hover ~ .cardsBelt__card--shape {
-  //   background-color: $color-highlight; usar degrade radial de gris una vez resuelto
+  //   background-color: $color--highlight; usar degrade radial de gris una vez resuelto
   // }
 
   /* Pregunta, en los HTML no le asigne afooter__contact la clase class="cardsBelt__card--align" ya q pense q podria afectar negativamente en especial creia q la imagen iba a ser afectada 2 veces por los valores de width y height, y el posicionamiento, aunque si no estoy esquivocado solo tendrian q sobre escribir. ¿Q seria lo más correcto?, en este caso no hay propiedades q sean distintas (sobren o falten) de ambos grupos. Por ahora esto me parecio lo más limpio, tal vez tendria q crear una clase unica ya q este elemento es un poco distinto. mixin? */
   #footer__contact {
-    width: calc(4/5 * 88px);
-    height: calc(4/5 * 70px);
+    $temp--A : 4/5 * 88px;
+    $temp--B : 4/5 * 70px;
+    width: $temp--A;
+    height: $temp--B;
     z-index: 1;
     margin-right: 4px; /* Controla la superpocicion de la esquina */
 
@@ -254,18 +258,20 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
 
     #footer__contact--shape {
       transform: scaleY(0.8) skew(150deg) translateY(20%);
-      background: $color-footerBtn-hover;
+      background: $color--footerBtn-hover;
     }
   }
 
   #footer__contact--shape {
-    width: calc(4/5 * 88px);
-    height: calc(4/5 * 70px);
+    $temp--A : 4/5 * 88px;
+    $temp--B : 4/5 * 70px;
+    width: $temp--A;
+    height: $temp--B;
     transform: skew(145deg);
-    background-color: $color-accent;
+    background-color: $color--accent;
     border-radius: 4px;
     // border: 2px solid ;
-    box-shadow: 0px 0px 0px 1.6px $color-btn-border;
+    box-shadow: 0px 0px 0px 1.6px $color--btn-border;
     transition: 500ms;
   }
 
@@ -274,10 +280,10 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
     height: 16px;
     display: block;
     transform: scaleY(2.11) rotate(45deg);
-    background-color: $color-accent;
-    color: $color-text;
+    background-color: $color--accent;
+    color: $color--text;
     text-align: center;
-    border: 1px solid $color-text;
+    border: 1px solid $color--text;
     overflow:hidden;
     transition: 260ms;
     line-height: 22px;
@@ -290,37 +296,43 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
     width: 48px;
     height: 48px;
     translate: 0px -48px;
-    box-shadow: 3px 3px 0px 2px $color-BG , 6px 6px 0px 4px $color-btn-border;
+    box-shadow: 3px 3px 0px 2px $color--BG , 6px 6px 0px 4px $color--btn-border;
   }
 /* + */
 
 
 /* +Index */
-  #index-news {
-    max-width: 1200px;
-  }
+  #p-index {
+    #news {
+      max-width: 1200px;
+    }
 
-  .promo__container {
+  }
+/* + */
+
+
+/* +p-googleDocsPromoDiv */
+  #p-googleDocsPromoDiv {
     display: flex;
     flex-flow: row wrap;
-    max-width: 1300px; /* Colocar var y cal de promo__card--iframe width * 4 + margen o padding + gap */
+    max-width: 1300px; /* Colocar var y cal de card--iframe width * 4 + margen o padding + gap */
     align-items: flex-start;
     justify-content: stretch;
     gap: 10px 10px;
-  }
 
-  .promo__card--iframe {
-    width: 300px;
-    height: 380px;
+    .card--iframe {
+      width: 300px;
+      height: 380px;
 
-    margin: -32px -3px -33px; /* Cutoff Magic!!! */
-  }
+      margin: -32px -3px -33px; /* card--cutoff Magic!!! */
+    }
 
-  /* https://stackoverflow.com/questions/63653100/remove-google-border-from-embedded-google-sheet */
-  .promo__card--cutoff {
-    overflow: hidden; /* Makes cutoff work */
-    // border: 2px solid black; /* Just for aesthetics, can be removed */
-    display: inline-block; /* Fit div to contents */
+    /* https://stackoverflow.com/questions/63653100/remove-google-border-from-embedded-google-sheet */
+    .card--cutoff {
+      overflow: hidden; /* Makes card--cutoff work */
+      // border: 2px solid black; /* Just for aesthetics, can be removed */
+      display: inline-block; /* Fit div to contents */
+    }
   }
 /* + */
 
@@ -328,8 +340,8 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
 /* +404 */
   .e404--logo {
     font-size: 20rem;
-    color: $color-highlight;
-    text-shadow: 2px 2px 2px $color-text;
+    color: $color--highlight;
+    text-shadow: 2px 2px 2px $color--text;
     font-family: 'Monoton', cursive;
   }
 /* + */
@@ -351,36 +363,36 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
   @media only screen and (min-width:1024px) {
     header {
       width: 90%;
+    }
 
-      nav {
-        gap: 0px 40px;
-        grid-template-areas:
-          "nav__logo nav1 nav2 nav3 nav4"
-          "nav__logo .    .    .    ."
-        ;
+    #p-nav {
+      gap: 0px 40px;
+      grid-template-areas:
+        "logo g-nav--1 g-nav--2 g-nav--3 g-nav--4"
+        "logo .    .    .    ."
+      ;
+
+      .svg {
+        height: 10rem;
+      }
+
+      .btn {
+        min-width: 256px;
+        font-size: 1.5rem;
+        position: relative;
+        top: 5px;
+      }
+
+      .logo {
+        border: none;
+        background-color: unset;
+        grid-area: logo;
+        padding: 0px;
+        margin: 0px;
       }
     }
 
-    .nav__logo--svg {
-      height: 10rem;
-    }
-
-    .nav__Text {
-      min-width: 256px;
-      font-size: 1.5rem;
-      position: relative;
-      top: 5px;
-    }
-
-    #nav__logo {
-      border: none;
-      background-color: unset;
-      grid-area: nav__logo;
-      padding: 0px;
-      margin: 0px;
-    }
-
-    .main__align {
+    #p-mainGrid {
       /* flex: none; */ /* ¿Es necesario? */
       display: grid; /* ¿Causa algun problema si coloco grid SOLO aquí? o sea no esta puesto en "Mobile" ya q no la usa, es una curiocidad. */
       gap: 0px 10px;
@@ -390,26 +402,28 @@ $color-footerBtn-hover: rgba(147, 150, 158, 0.972);
       ;
       align-items: flex-start;
       justify-content: stretch;
-    }
 
-    section.sec1 {
-      grid-area: sec1;
-    }
-    section.sec2 {
-      grid-area: sec2;
-    }
-    section.sec3 {
-      grid-area: sec3;
-    }
-    section.sec4 {
-      grid-area: sec4;
-    }
+      .sec1 {
+        grid-area: sec1;
+      }
 
-    section.secAside1 {
-      grid-area: secAside1;
-    }
-    section.secAside2 {
-      grid-area: secAside2;
+      .sec2 {
+        grid-area: sec2;
+      }
+      .sec3 {
+        grid-area: sec3;
+      }
+      .sec4 {
+        grid-area: sec4;
+      }
+
+      .secAside1 {
+        grid-area: secAside1;
+      }
+
+      .secAside2 {
+        grid-area: secAside2;
+      }
     }
 
     main section {

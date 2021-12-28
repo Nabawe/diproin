@@ -1,6 +1,12 @@
 + Todos los archivos SASS deben tener un guion bajo al inicio?, cuando eran necesarios? en el materiar complementario hablaba de subsecciones de SASS pero solo para eso?
+
+
 + Consultar sobre la estructura de SASS, estructura como projecto.
+
+
 + La sintaxis indentada tiene alguna limitante para comentarios o algo? al punto q VS Code no viene por defecto listo para entender .sass.
+
+
 + Cuando instale Live SASS Compiler tube q cambiar settings.json a esto :
     "liveSassCompile.settings.formats": [{
         "format": "expanded",
@@ -17,4 +23,6 @@
         "extensionName": ".css",
         "savePath": "./css"
     }]
+
+
 + No tube uso de "Modifier" en BEM o hay algo q estoy haciendo mal?

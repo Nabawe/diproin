@@ -53,8 +53,8 @@
     display: grid;
     gap: 5px;
     grid-template-areas:
-      "nav__logo nav1 nav2"
-      "nav__logo nav3 nav4"
+      "logo g-nav--1 g-nav--2"
+      "logo g-nav--3 g-nav--4"
     ;
     align-items: center; /* No me quedan bien las alineaciones del texto. */
     /* Y los botones me quedan en tamaños desiguales, estoy intentando evitar usar una medida absoluta d width */
@@ -68,7 +68,7 @@
     color: #EEE8A9;
   }
 
-  .nav__Text {
+  .btn {
     min-width: 110px; /* Si cambio "Nosotros" por "Quienes Somos" en el html queda todo mal, ¿Cómo tendria q solucionarlo para poder usar Quienes Somos? */
     color: #F2FBFF;
     text-decoration: none;
@@ -81,30 +81,30 @@
     padding-bottom: 4%; /* Sin esto queda mal la alineacion vertical. ¿Recomendacion? */
   }
 
-  #nav__logo {
+  .logo {
     border: none;
     background-color: unset;
-    grid-area: nav__logo;
+    grid-area: logo;
     padding: 0px;
     margin-top: 4%; /* Nuevamente use esto pork sino quedaba mal "align" */
     justify-self: left; /* Otra propiedad q si no ponia quedaba mal en 360. En realidad queria mover las <a> de la nav q no son el logo más cerca del lado der del logo pero agregando la menor cantidad de codigo y en especial sin modificar el html. ¿Recomendacion? */
     /* ¿Afectara estar usando directamente <a>? probe usando display:block y inlineblock para no poner divs. */
   }
 
-  #nav1 {
-    grid-area: nav1;
+  #g-nav--1 {
+    grid-area: g-nav--1;
   }
 
-  #nav2 {
-    grid-area: nav2;
+  #g-nav--2 {
+    grid-area: g-nav--2;
   }
 
-  #nav3 {
-    grid-area: nav3;
+  #g-nav--3 {
+    grid-area: g-nav--3;
   }
 
-  #nav4 {
-    grid-area: nav4;
+  #g-nav--4 {
+    grid-area: g-nav--4;
   }
 /* + */
 
@@ -244,9 +244,9 @@
 /* +Media Querries */
   /* A futuro pensar, 3 medidas de celulares, 2 de phablets, 4 de tablets, 2 de notebook 16:10 y 16:9, 4 de PC, 4 de TV, 2 cuadradas universales para todos los dispositivos q usen pantallas cuadradas. ¿Tiene algo de sentido lo q puse recien o solo estoy desperdiciando tiempo? ¿Hay algun sitio q haga analisis y me diga a q apuntar para X producto/tipo de pagina? */
   /* @media only screen and (min-width:600px) {
-    main.main__align {
+    main.p-mainGrid {
       grid-template-areas:
-        "deals liveFeed"
+        " liveFeed"
         "news liveFeed"
       ;
       grid-template-columns: auto auto;
@@ -263,23 +263,23 @@
       display: grid;
       gap: 20px;
       grid-template-areas:
-        "nav__logo nav1 nav2 nav3 nav4"
+        "logo g-nav--1 g-nav--2 g-nav--3 g-nav--4"
       ;
     }
 
-    .nav__Text {
+    .btn {
       font-size: 1.5rem;
     }
 
-    #nav__logo {
+    .logo {
       border: none;
       background-color: unset;
-      grid-area: nav__logo;
+      grid-area: logo;
       padding: 0px;
       margin: 0px;
     }
 
-    main.main__align {
+    main.p-mainGrid {
       /* flex: none; */ /* ¿Es necesario? */
       display: grid;
       gap: 20px;

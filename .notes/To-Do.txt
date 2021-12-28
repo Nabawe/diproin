@@ -1,3 +1,15 @@
+1 - Incorporar SASS: GPS y & y articulo de las medidas
+2 - Clean Code and Classes
+3 - Fix Measurements to 16 cubes, define min widths, define the 3 sizes (2 of them are 720 and then 1080 greater or equal)
+4 - Fix Promo Cards, section borders, then recheck the 3 sizes
+5 - Add Content
+6 - Background
+7 - Minibar
+8 - Add Site Map
+9 - Improve 404
+
+
+
 + Improve madeBy, instead of GitHub link to my porfolio, add contact info and repos.
 
 
@@ -27,8 +39,9 @@
 
 
 + Decidir si poner un boton flotante back to top o si la nav queda siempre visible
-    !!! Creo q seria mejor q la nav se vuelva una "mini nav" con los elementos bien chatos y q quede siempre visible, ya q con las modificaciones anteriores queda bien simplificada, pero de hacer esto por ahi sea mejor q quede contact arriba.
+    !!! Creo q seria mejor q la nav se vuelva una "mini nav" o "minibar" con los elementos bien chatos y q quede siempre visible, ya q con las modificaciones anteriores queda bien simplificada, pero de hacer esto por ahi sea mejor q quede contact arriba. El logotipo q quede cropped dejando solo el texto y tal vez achicarlo un poco.
         · El efecto para la nav bar es el del encendido de un fósforo, una llama pero solo para vías de luz, o sea una distorcion o blur con bordes bien brillantes haciendo un poquito de zoom en las juntas de los azulejos.
+            Con azulejos vi q se parece a lo q llaman Art Deco o Arc Deco.
     - OLD : [Que sea corrediza en la ver de celular y no un menu, dejando el logo estatico para volver]
 
 
@@ -75,7 +88,7 @@
 + SEO agregar a las keywords productos reprecentativos.
 
 
-+ promo__card--iframe si uso imagenes "incell" no se muestran y si las pongo "over cell" me crea un borde fino negro. Soluciones?
++ card--iframe si uso imagenes "incell" no se muestran y si las pongo "over cell" me crea un borde fino negro. Soluciones?
     - Subir a drive y luego modificar el formato de la dirección y usar
         http://drive.google.com/uc?export=view&id=<REEMPLAZAR AQUI CON FILEID>
             Parece q este es el formato para perma links
@@ -102,7 +115,19 @@
 + Dark/Light Modes ?
 
 
++ Progressive Enhancement.
+    Progressive enhancement is a strategy in web design that puts emphasis on web content first, allowing everyone to access the basic content and functionality of a web page, whilst users with additional browser features or faster Internet access receive the enhanced version instead.
 
+
++ En el sistema GPS las clases no deberian reflejar su anidación sino la anidación debería ayudar a simplificar la creacion de claces, el problema esta cuando un elemento usa multiples clases q determinan su configuracion, cuando estan atadas a globales tengo q encontrar una mejor forma q hacer:
+    miniText
+        estoy usando el -- como separador de nivel
+
+    Supuestamente lo q se tendria q dar es el usar una clase con id y referenciar los elementos child con su relacion a ese id y las clases extra a agregar ser globales.
+
+    ? Necesito algo para lidiar con claces externas como twitter-timeline o si agarro alguna lib.
+        Aislarlas con un wrapper o algo tipo div.class = "g-external" q no hace nada mas q colocar entre divs cosas externas.
+            o g-external-1 ; g-external-2 ; g-external-twitter o sea agregar un ID.
 
 
 
