@@ -3,11 +3,12 @@
 3 - Fix Measurements to 16 cubes, define min widths, define the 3 sizes (2 of them are 720 and then 1080 greater or equal)
 4 - Fix Promo Cards, section borders, then recheck the 3 sizes
 5 - Add Content
-6 - Background
-7 - Minibar
-8 - Add Site Map
-9 - Improve 404
-10 - Improve Testimonials
+6 - Fix Redirection
+7 - Background
+8 - Minibar
+9 - Add Site Map
+10 - Improve 404
+11 - Improve Testimonials
     Seria mejor q sea un feed a una seccion de una red social asi se actualizan.
 
 50 - g-WIP--hidden

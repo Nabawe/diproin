@@ -35,7 +35,7 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
   body {
     background-color: $color--BG;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     justify-items: center;/* ESTO ES UN RECORDATORIO YA Q VEO PROBLEMAS POR ESTAS 2 lineas Aquí primero no estoy completamente seguro si deberia usar flexbox por defecto para Mobile First y segundo no estoy seguro si usar items o content para body?  */
     align-items: center;
 
@@ -75,7 +75,6 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
       "logo g-nav--3 g-nav--4 ."
       "logo .    .    ."
     ;
-    align-items: center;
 
     a:hover {
       color: $color--highlight;
@@ -403,7 +402,7 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
       gap: 0px 40px;
       grid-template-areas:
         "logo g-nav--1 g-nav--2 g-nav--3 g-nav--4"
-        "logo .    .    .    ."
+        "logo .        .        .        ."
       ;
 
       .svg {
@@ -433,16 +432,14 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
     #p-mainGrid {
       /* flex: none; */ /* ¿Es necesario? */
       display: grid; /* ¿Causa algun problema si coloco grid SOLO aquí? o sea no esta puesto en "Mobile" ya q no la usa, es una curiocidad. */
-      flex-flow: row wrap;
       gap: 10px 10px;
+      padding: 10px;
       grid-template-areas:
         "sec1 sec1 secAside1"
         "sec2 sec2 secAside1"
         "sec3 sec3 secAside1"
         "sec4 sec4 secAside1"
       ;
-      align-items: flex-start;
-      justify-content: stretch;
       .sec1 {
         grid-area: sec1;
       }
@@ -465,14 +462,13 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
 
     #p-staffGrid {
       display: grid;
-      flex-flow: row wrap;
       gap: 10px 10px;
+      padding: 10px;
       grid-template-areas:
         "staff1 staff2 staff3"
+        ".      .      ."
         "staff4 staff5 staff6"
       ;
-      align-items: flex-start;
-      justify-content: stretch;
       .staff1 {
         grid-area: staff1;
       }
@@ -493,10 +489,21 @@ $color--footerBtn-hover   : rgba(147, 150, 158, 0.972);
       }
 
       .card {
-        width: 300px;
-        height: 300px;
+        width: 512px;
+        height: 512px;
         border: 1px solid $color--btn-border;
-        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px 0px;
+
+        .face {
+          width: 40%;
+          height: 40%;
+          border: 2px solid $color--btn-border;
+          border-radius: 50%;
+        }
       }
     }
   }
